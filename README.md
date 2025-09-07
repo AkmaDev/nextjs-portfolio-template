@@ -54,7 +54,7 @@ Ce projet va au-delà d’un simple portfolio : il combine **visibilité, access
 
 ```bash
 # 1. Cloner le repo
-git clone https://github.com/<AkmaDev>/nextjs-portfolio-template.git
+git clone https://github.com/AkmaDev/nextjs-portfolio-template.git
 ```
 # 2. Installer les dépendances
 ```bash
