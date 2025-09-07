@@ -1,3 +1,2620 @@
+# 📦 Project Dump
+
+
+## 📄 app\globals.css
+
+```css
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.81 0.1 252);
+  --chart-2: oklch(0.62 0.19 260);
+  --chart-3: oklch(0.55 0.22 263);
+  --chart-4: oklch(0.49 0.22 264);
+  --chart-5: oklch(0.42 0.18 266);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --radius: 0.625rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
+    0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
+    0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
+    0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
+    0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.269 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.371 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.275 0 0);
+  --input: oklch(0.325 0 0);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.81 0.1 252);
+  --chart-2: oklch(0.62 0.19 260);
+  --chart-3: oklch(0.55 0.22 263);
+  --chart-4: oklch(0.49 0.22 264);
+  --chart-5: oklch(0.42 0.18 266);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.275 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --radius: 0.625rem;
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
+    0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
+    0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
+    0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1),
+    0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .shadow-premium {
+    box-shadow: var(--shadow-premium);
+  }
+
+  .glow-subtle {
+    box-shadow: var(--glow-subtle);
+  }
+
+  .text-accent-glow {
+    @apply text-primary;
+    text-shadow: 0 0 20px hsl(var(--gradient-primary) / 0.3);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Premium Cards */
+  .card-premium {
+    @apply bg-card border border-border rounded-lg p-6;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+  }
+
+  .card-premium:hover {
+    box-shadow: var(--shadow-premium);
+    transform: translateY(-2px);
+  }
+
+  /* Professional Button */
+  .btn-professional {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium;
+    @apply bg-primary text-primary-foreground;
+    @apply hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-professional:hover {
+    box-shadow: var(--shadow-premium), var(--shadow-glow);
+  }
+
+  /* Section Spacing */
+  .section-spacing {
+    @apply py-16 px-6;
+  }
+}
+
+/* Article Content Styles */
+.article-content h2 {
+  @apply text-2xl font-bold mt-8 mb-4 text-foreground;
+}
+
+.article-content h3 {
+  @apply text-xl font-semibold mt-6 mb-3 text-foreground;
+}
+
+.article-content p {
+  @apply text-muted-foreground leading-relaxed mb-4;
+}
+
+.article-content ul {
+  @apply list-disc list-inside space-y-2 mb-6 text-muted-foreground;
+}
+
+.article-content li strong {
+  @apply text-foreground font-semibold;
+}
+
+```
+
+## 📄 app\layout.tsx
+
+```tsx
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Create Next App",
+  description: "Generated by create next app",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main>{children}</main>
+          <Toaster />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
+
+```
+
+## 📄 app\page.tsx
+
+```tsx
+import { AboutSection } from "@/components/portfolio/AboutSection";
+import { ContactSection } from "@/components/portfolio/ContactSection";
+import { ExperienceSection } from "@/components/portfolio/ExperienceSection";
+import { HeroSection } from "@/components/portfolio/HeroSection";
+import { ProjectsSection } from "@/components/portfolio/ProjectsSection";
+import { SkillsSection } from "@/components/portfolio/SkillsSection";
+import { siteConfig } from "@/types/site";
+import Head from "next/head";
+
+export default function HomePage() {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://manasseakpovi.com"; // 🔑 évite window
+
+  return (
+    <>
+      <Head>
+        <title>{siteConfig.title}</title>
+        <meta name="description" content={siteConfig.description} />
+        <meta
+          name="keywords"
+          content="React.js, TypeScript, Développeur Frontend, Portfolio, Manassé AKPOVI"
+        />
+        <meta name="author" content={siteConfig.name} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={siteConfig.title} />
+        <meta property="og:description" content={siteConfig.description} />
+        <meta property="og:url" content={baseUrl} />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content={siteConfig.title} />
+        <meta property="twitter:description" content={siteConfig.description} />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: siteConfig.name,
+              jobTitle: siteConfig.hero.subtitle,
+              email: siteConfig.email,
+              telephone: siteConfig.phone,
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: siteConfig.location,
+              },
+              url: baseUrl,
+              sameAs: [
+                siteConfig.socialLinks.linkedin,
+                siteConfig.socialLinks.github,
+              ],
+            }),
+          }}
+        />
+      </Head>
+
+      <div className="min-h-screen bg-background">
+        <main id="main-content">
+          <HeroSection />
+          <AboutSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <SkillsSection />
+          <ContactSection />
+        </main>
+      </div>
+    </>
+  );
+}
+
+```
+
+## 📄 components\AccessibilityProvider.tsx
+
+```tsx
+"use client";
+
+import React, { createContext, useContext, useEffect, useState } from "react";
+
+type AccessibilityContextType = {
+  reducedMotion: boolean;
+  highContrast: boolean;
+  setReducedMotion: (value: boolean) => void;
+  setHighContrast: (value: boolean) => void;
+};
+
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
+
+export const useAccessibility = () => {
+  const context = useContext(AccessibilityContext);
+  if (!context) {
+    throw new Error(
+      "useAccessibility must be used within AccessibilityProvider"
+    );
+  }
+  return context;
+};
+
+type AccessibilityProviderProps = {
+  children: React.ReactNode;
+};
+
+export const AccessibilityProvider = ({
+  children,
+}: AccessibilityProviderProps) => {
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [highContrast, setHighContrast] = useState(false);
+
+  // Gestion motion
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) =>
+      setReducedMotion(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  // Gestion contraste
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const mediaQuery = window.matchMedia("(prefers-contrast: high)");
+    setHighContrast(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => setHighContrast(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  // Appliquer classes au <html>
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+
+    const html = document.documentElement;
+    if (reducedMotion) {
+      html.classList.add("reduce-motion");
+    } else {
+      html.classList.remove("reduce-motion");
+    }
+    if (highContrast) {
+      html.classList.add("high-contrast");
+    } else {
+      html.classList.remove("high-contrast");
+    }
+  }, [reducedMotion, highContrast]);
+
+  return (
+    <AccessibilityContext.Provider
+      value={{ reducedMotion, highContrast, setReducedMotion, setHighContrast }}
+    >
+      {children}
+    </AccessibilityContext.Provider>
+  );
+};
+
+// ✅ Composant de contrôle
+export const AccessibilityControls = () => {
+  const { reducedMotion, highContrast, setReducedMotion, setHighContrast } =
+    useAccessibility();
+
+  return (
+    <div className="accessibility-controls fixed bottom-4 right-4 bg-card border border-border rounded-lg p-4 shadow-lg z-50">
+      <h3 className="text-sm font-medium mb-3">Accessibilité</h3>
+
+      <div className="space-y-2">
+        <label
+          className="flex items-center gap-2 text-sm"
+          aria-label="Réduire les animations"
+        >
+          <input
+            type="checkbox"
+            checked={reducedMotion}
+            onChange={(e) => setReducedMotion(e.target.checked)}
+            className="w-4 h-4"
+          />
+          Réduire les animations
+        </label>
+
+        <label
+          className="flex items-center gap-2 text-sm"
+          aria-label="Activer contraste élevé"
+        >
+          <input
+            type="checkbox"
+            checked={highContrast}
+            onChange={(e) => setHighContrast(e.target.checked)}
+            className="w-4 h-4"
+          />
+          Contraste élevé
+        </label>
+      </div>
+    </div>
+  );
+};
+
+```
+
+## 📄 components\Analytics.tsx
+
+```tsx
+"use client";
+
+import { useEffect } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { siteConfig } from "@/types/site";
+
+declare global {
+  interface Window {
+    plausible?: (
+      event: string,
+      options?: { props?: Record<string, unknown> }
+    ) => void;
+    gtag?: (command: string, ...args: unknown[]) => void;
+  }
+}
+
+const Analytics: React.FC = () => {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (!siteConfig.analytics?.enabled) return;
+
+    const { provider } = siteConfig.analytics;
+    const pagePath =
+      pathname +
+      (searchParams?.toString() ? "?" + searchParams.toString() : "");
+
+    if (provider === "plausible" && window.plausible) {
+      window.plausible("pageview");
+    }
+
+    if (provider === "ga4" && window.gtag) {
+      const { ga4MeasurementId } = siteConfig.analytics;
+      window.gtag("config", ga4MeasurementId!, {
+        page_path: pagePath,
+      });
+    }
+  }, [pathname, searchParams]);
+
+  useEffect(() => {
+    if (!siteConfig.analytics?.enabled) return;
+
+    const { provider } = siteConfig.analytics;
+
+    if (provider === "plausible") {
+      const { plausibleDomain } = siteConfig.analytics;
+      const script = document.createElement("script");
+      script.defer = true;
+      script.dataset.domain = plausibleDomain;
+      script.src = "https://plausible.io/js/script.js";
+      document.head.appendChild(script);
+
+      return () => {
+        document.head.removeChild(script);
+      };
+    }
+
+    if (provider === "ga4") {
+      const { ga4MeasurementId } = siteConfig.analytics;
+      const script1 = document.createElement("script");
+      script1.async = true;
+      script1.src = `https://www.googletagmanager.com/gtag/js?id=${ga4MeasurementId}`;
+      document.head.appendChild(script1);
+
+      const script2 = document.createElement("script");
+      script2.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${ga4MeasurementId}');
+      `;
+      document.head.appendChild(script2);
+
+      return () => {
+        document.head.removeChild(script1);
+        document.head.removeChild(script2);
+      };
+    }
+  }, []);
+
+  return null;
+};
+
+// Helpers
+export const trackEvent = (
+  eventName: string,
+  properties?: Record<string, unknown>
+) => {
+  if (!siteConfig.analytics?.enabled) return;
+
+  const { provider } = siteConfig.analytics;
+
+  if (provider === "plausible" && window.plausible) {
+    window.plausible(eventName, { props: properties });
+  }
+
+  if (provider === "ga4" && window.gtag) {
+    window.gtag("event", eventName, properties);
+  }
+};
+
+export const trackProjectView = (projectTitle: string) => {
+  trackEvent("project_view", { project_title: projectTitle });
+};
+
+export const trackContactForm = (formType: "contact" | "project_inquiry") => {
+  trackEvent("contact_form_submit", { form_type: formType });
+};
+
+export const trackDownload = (downloadType: "pdf_cv" | "resume") => {
+  trackEvent("download", { download_type: downloadType });
+};
+
+export const trackExternalLink = (
+  linkUrl: string,
+  linkType: "github" | "linkedin" | "project" | "portfolio"
+) => {
+  trackEvent("external_link_click", { link_url: linkUrl, link_type: linkType });
+};
+
+export default Analytics;
+
+```
+
+## 📄 components\ModeToggle.tsx
+
+```tsx
+"use client";
+
+import * as React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+export function ModeToggle() {
+  const { setTheme } = useTheme();
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon">
+          <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => setTheme("light")}>
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
+          System
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+```
+
+## 📄 components\PDFDocument.tsx
+
+```tsx
+import React from "react";
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  StyleSheet,
+  Font,
+} from "@react-pdf/renderer";
+import { siteConfig } from "@/types/site";
+
+Font.registerHyphenationCallback((word) => [word]);
+
+Font.register({
+  family: "Inter",
+  fonts: [
+    { src: "/fonts/Inter-Regular.otf" },
+    { src: "/fonts/Inter-Medium.otf", fontWeight: "medium" },
+    { src: "/fonts/Inter-Bold.otf", fontWeight: "bold" },
+  ],
+});
+
+// Styles PDF
+const styles = StyleSheet.create({
+  page: {
+    fontFamily: "Inter",
+    fontSize: 10,
+    lineHeight: 1.4,
+    color: "#1f2937",
+    backgroundColor: "#ffffff",
+    padding: 40,
+  },
+  header: { marginBottom: 30, textAlign: "center" },
+  name: { fontSize: 24, fontWeight: "bold", color: "#6366f1", marginBottom: 8 },
+  subtitle: { fontSize: 14, color: "#374151", marginBottom: 12 },
+  contactInfo: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginBottom: 20,
+    fontSize: 9,
+    color: "#6b7280",
+  },
+  contactItem: { textAlign: "center" },
+  section: { marginBottom: 24 },
+  sectionTitle: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#1f2937",
+    marginBottom: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: "#e5e7eb",
+    paddingBottom: 4,
+  },
+  aboutText: {
+    fontSize: 10,
+    lineHeight: 1.5,
+    color: "#374151",
+    textAlign: "justify",
+  },
+  experienceItem: { marginBottom: 16 },
+  experienceHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 6,
+  },
+  jobTitle: { fontSize: 11, fontWeight: "bold", color: "#1f2937" },
+  company: { fontSize: 10, color: "#6366f1", fontWeight: "medium" },
+  period: { fontSize: 9, color: "#6b7280", textAlign: "right" },
+  location: { fontSize: 9, color: "#6b7280", textAlign: "right" },
+  achievementsList: { marginLeft: 12 },
+  achievement: {
+    fontSize: 9,
+    color: "#374151",
+    marginBottom: 3,
+    lineHeight: 1.3,
+  },
+  bullet: { color: "#6366f1", marginRight: 6 },
+  projectItem: {
+    marginBottom: 16,
+    padding: 12,
+    backgroundColor: "#f9fafb",
+    borderRadius: 4,
+  },
+  projectHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    marginBottom: 6,
+  },
+  projectTitle: { fontSize: 11, fontWeight: "bold", color: "#1f2937", flex: 1 },
+  projectStatus: {
+    fontSize: 8,
+    paddingVertical: 2,
+    paddingHorizontal: 6,
+    borderRadius: 4,
+  },
+  projectType: {
+    fontSize: 9,
+    color: "#6366f1",
+    fontWeight: "medium",
+    marginBottom: 4,
+  },
+  projectDescription: {
+    fontSize: 9,
+    color: "#374151",
+    lineHeight: 1.4,
+    marginBottom: 6,
+  },
+  technologiesList: { flexDirection: "row", flexWrap: "wrap", marginBottom: 4 },
+  techBadge: {
+    fontSize: 8,
+    color: "#374151",
+    backgroundColor: "#e5e7eb",
+    paddingVertical: 2,
+    paddingHorizontal: 6,
+    borderRadius: 3,
+    marginRight: 4,
+    marginBottom: 4,
+  },
+  skillsContainer: { flexDirection: "row", justifyContent: "space-between" },
+  skillsColumn: { flex: 1 },
+  skillsSubtitle: {
+    fontSize: 11,
+    fontWeight: "medium",
+    color: "#1f2937",
+    marginBottom: 8,
+  },
+  skillsList: { flexDirection: "row", flexWrap: "wrap", marginBottom: 4 },
+  skillBadge: {
+    fontSize: 9,
+    color: "#1f2937",
+    borderWidth: 1,
+    borderColor: "#d1d5db",
+    paddingVertical: 3,
+    paddingHorizontal: 8,
+    borderRadius: 4,
+    marginRight: 4,
+    marginBottom: 4,
+  },
+  linkText: { color: "#6366f1", textDecoration: "underline" },
+  footer: {
+    position: "absolute",
+    bottom: 30,
+    left: 40,
+    right: 40,
+    textAlign: "center",
+    fontSize: 8,
+    color: "#9ca3af",
+    borderTopWidth: 1,
+    borderTopColor: "#e5e7eb",
+    paddingTop: 12,
+  },
+});
+
+const PDFDocument: React.FC = () => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.name}>{siteConfig.name}</Text>
+        <Text style={styles.subtitle}>{siteConfig.hero.subtitle}</Text>
+
+        <View style={styles.contactInfo}>
+          <View style={styles.contactItem}>
+            <Text>Email: {siteConfig.email}</Text>
+          </View>
+          <View style={styles.contactItem}>
+            <Text>Téléphone: {siteConfig.phone}</Text>
+          </View>
+          <View style={styles.contactItem}>
+            <Text>Localisation: {siteConfig.location}</Text>
+          </View>
+        </View>
+      </View>
+
+      {/* About */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>{siteConfig.about.title}</Text>
+        <Text style={styles.aboutText}>{siteConfig.about.description}</Text>
+      </View>
+
+      {/* Experience */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Expérience Professionnelle</Text>
+        {siteConfig.experiences.map((exp, index) => (
+          <View key={index} style={styles.experienceItem}>
+            <View style={styles.experienceHeader}>
+              <View>
+                <Text style={styles.jobTitle}>{exp.position}</Text>
+                <Text style={styles.company}>{exp.company}</Text>
+              </View>
+              <View>
+                <Text style={styles.period}>{exp.period}</Text>
+                <Text style={styles.location}>{exp.location}</Text>
+              </View>
+            </View>
+            <View style={styles.achievementsList}>
+              {exp.achievements.map((achievement, achIndex) => (
+                <View
+                  key={achIndex}
+                  style={{ flexDirection: "row", alignItems: "flex-start" }}
+                >
+                  <Text style={styles.bullet}>•</Text>
+                  <Text style={styles.achievement}>{achievement}</Text>
+                </View>
+              ))}
+            </View>
+          </View>
+        ))}
+      </View>
+
+      {/* Projects */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Projets Phares</Text>
+        {siteConfig.projects.map((project, index) => (
+          <View key={index} style={styles.projectItem}>
+            <View style={styles.projectHeader}>
+              <Text style={styles.projectTitle}>{project.title}</Text>
+              <Text
+                style={[
+                  styles.projectStatus,
+                  {
+                    backgroundColor:
+                      project.status === "Terminé" ? "#d1fae5" : "#ddd6fe",
+                    color: project.status === "Terminé" ? "#059669" : "#7c3aed",
+                  },
+                ]}
+              >
+                {project.status}
+              </Text>
+            </View>
+            <Text style={styles.projectType}>{project.type}</Text>
+            <Text style={styles.projectDescription}>{project.description}</Text>
+            <View style={styles.technologiesList}>
+              {project.technologies.map((tech, techIndex) => (
+                <Text key={techIndex} style={styles.techBadge}>
+                  {tech}
+                </Text>
+              ))}
+            </View>
+          </View>
+        ))}
+      </View>
+
+      {/* Skills */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Compétences</Text>
+        <View style={styles.skillsContainer}>
+          <View style={styles.skillsColumn}>
+            <Text style={styles.skillsSubtitle}>Compétences Techniques</Text>
+            <View style={styles.skillsList}>
+              {siteConfig.skills.technical.map((skill, index) => (
+                <Text key={index} style={styles.skillBadge}>
+                  {skill}
+                </Text>
+              ))}
+            </View>
+          </View>
+          <View style={styles.skillsColumn}>
+            <Text style={styles.skillsSubtitle}>Compétences Transversales</Text>
+            <View style={styles.skillsList}>
+              {siteConfig.skills.soft.map((skill, index) => (
+                <Text key={index} style={styles.skillBadge}>
+                  {skill}
+                </Text>
+              ))}
+            </View>
+          </View>
+        </View>
+      </View>
+
+      {/* Footer */}
+      <View style={styles.footer}>
+        <Text>
+          Portfolio professionnel - LinkedIn: {siteConfig.socialLinks.linkedin}{" "}
+          • GitHub: {siteConfig.socialLinks.github}
+        </Text>
+      </View>
+    </Page>
+  </Document>
+);
+
+export default PDFDocument;
+
+```
+
+## 📄 components\PDFExport.tsx
+
+```tsx
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { toast } from "sonner";
+import { pdf } from "@react-pdf/renderer";
+import PDFDocument from "./PDFDocument";
+import { trackDownload } from "./Analytics";
+
+export function PDFExport() {
+  const handleDownloadPDF = async () => {
+    try {
+      toast.info("Génération du PDF en cours...", {
+        duration: 2000,
+      });
+
+      // Generate PDF blob
+      const blob = await pdf(React.createElement(PDFDocument)).toBlob();
+
+      // Create download link
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "CV_Manasse_AKPOVI.pdf";
+
+      // Trigger download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Clean up
+      URL.revokeObjectURL(url);
+
+      // Track download
+      trackDownload("pdf_cv");
+
+      toast.success("CV téléchargé avec succès !", {
+        duration: 4000,
+      });
+    } catch (error) {
+      console.error("Erreur lors de la génération du PDF:", error);
+      toast.error("Erreur lors de la génération du PDF", {
+        duration: 4000,
+      });
+    }
+  };
+
+  return (
+    <Button
+      onClick={handleDownloadPDF}
+      variant="outline"
+      size="sm"
+      className="no-print hover:bg-primary/10 transition-colors"
+      aria-label="Télécharger mon CV au format PDF"
+    >
+      <Download className="w-4 h-4 mr-2" />
+      Télécharger en PDF
+    </Button>
+  );
+}
+
+```
+
+## 📄 components\portfolio\AboutSection.tsx
+
+```tsx
+"use client";
+
+import { siteConfig } from "@/types/site";
+import { motion } from "framer-motion";
+import { JSX } from "react";
+
+export function AboutSection(): JSX.Element {
+  return (
+    <motion.section
+      className="section-spacing"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-4xl mx-auto px-4">
+        <motion.article
+          className="card-premium"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h2 className="text-3xl font-display font-semibold mb-6 text-primary">
+            {siteConfig.about.title}
+          </h2>
+          <p className="text-lg leading-relaxed text-muted-foreground">
+            {siteConfig.about.description
+              .split("React.js")
+              .join("")
+              .split("TypeScript")
+              .join("")}
+            <span className="text-primary font-medium">React.js</span> et{" "}
+            <span className="text-primary font-medium">TypeScript</span>
+            {siteConfig.about.description.split("TypeScript")[1]}
+          </p>
+        </motion.article>
+      </div>
+    </motion.section>
+  );
+}
+
+```
+
+## 📄 components\portfolio\ContactSection.tsx
+
+```tsx
+"use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { toast } from "sonner";
+import { siteConfig } from "@/types/site";
+
+interface ContactSectionProps {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  company: string;
+}
+
+export function ContactSection() {
+  const [formData, setFormData] = useState<ContactSectionProps>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    company: "",
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      toast.success("Message envoyé ! Je vous répondrai bientôt.", {
+        duration: 4000,
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        company: "",
+      });
+    } catch (error) {
+      console.error("Contact error:", error);
+      toast.error("Une erreur est survenue. Veuillez réessayer.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <motion.section
+      className="section-spacing bg-card/30 relative"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-4xl mx-auto px-4">
+        <motion.h2
+          className="text-3xl font-display font-semibold mb-12 text-center text-primary"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Contactez-moi
+        </motion.h2>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          <motion.aside
+            className="space-y-8"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div>
+              <h3 className="text-xl font-display font-medium text-foreground mb-6">
+                Restons en contact
+              </h3>
+              <p className="text-muted-foreground mb-8">
+                Intéressé par une collaboration ? N&apos;hésitez pas à me
+                contacter.
+              </p>
+            </div>
+
+            <address className="space-y-4 not-italic">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Email</p>
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {siteConfig.email}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Téléphone</p>
+                  <a
+                    href={`tel:${siteConfig.phone}`}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {siteConfig.phone}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Localisation</p>
+                  <p className="text-muted-foreground">{siteConfig.location}</p>
+                </div>
+              </div>
+            </address>
+
+            <nav className="flex gap-4 pt-4" aria-label="Réseaux sociaux">
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href={siteConfig.socialLinks.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn de Manassé AKPOVI"
+                >
+                  <FaLinkedin className="w-4 h-4 mr-2" />
+                  LinkedIn
+                </a>
+              </Button>
+
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href={siteConfig.socialLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub de Manassé AKPOVI"
+                >
+                  <FaGithub className="w-4 h-4 mr-2" />
+                  GitHub
+                </a>
+              </Button>
+            </nav>
+          </motion.aside>
+
+          <motion.div
+            className="card-premium"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Nom complet *</Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Votre nom"
+                    required
+                    disabled={isLoading}
+                    aria-describedby="name-error"
+                    className="focus:ring-2 focus:ring-primary focus:border-primary"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email *</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="votre@email.com"
+                    required
+                    disabled={isLoading}
+                    aria-describedby="email-error"
+                    className="focus:ring-2 focus:ring-primary focus:border-primary"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="subject">Sujet *</Label>
+                <Input
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Sujet de votre message"
+                  required
+                  disabled={isLoading}
+                  aria-describedby="subject-error"
+                  className="focus:ring-2 focus:ring-primary focus:border-primary"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="message">Message *</Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Décrivez votre projet..."
+                  rows={6}
+                  required
+                  disabled={isLoading}
+                  aria-describedby="message-error"
+                  className="focus:ring-2 focus:ring-primary focus:border-primary resize-none"
+                />
+              </div>
+
+              <Button
+                type="submit"
+                className="w-full btn-professional"
+                disabled={isLoading}
+                aria-describedby={isLoading ? "loading-message" : undefined}
+              >
+                <Send className="w-4 h-4 mr-2" />
+                {isLoading ? "Envoi en cours..." : "Envoyer le message"}
+              </Button>
+
+              {isLoading && (
+                <div
+                  id="loading-message"
+                  className="sr-only"
+                  aria-live="polite"
+                >
+                  Votre message est en cours d&apos;envoi, veuillez patienter.
+                </div>
+              )}
+            </form>
+          </motion.div>
+        </div>
+
+        <motion.footer
+          className="mt-16 pt-8 border-t border-border text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <p className="text-muted-foreground">
+            © 2024 {siteConfig.name}. Tous droits réservés.{" "}
+            <span className="text-primary ml-2">
+              Développé avec React.js & TypeScript
+            </span>
+          </p>
+        </motion.footer>
+      </div>
+    </motion.section>
+  );
+}
+
+```
+
+## 📄 components\portfolio\ExperienceSection.tsx
+
+```tsx
+"use client";
+
+import { siteConfig } from "@/types/site";
+import { motion } from "framer-motion";
+import { Calendar, MapPin, Building } from "lucide-react";
+
+export function ExperienceSection() {
+  return (
+    <motion.section
+      className="section-spacing"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-4xl mx-auto px-4">
+        <motion.h2
+          className="text-3xl font-display font-semibold mb-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Expérience Professionnelle
+        </motion.h2>
+
+        <div className="space-y-8">
+          {siteConfig.experiences.map((exp, index) => (
+            <motion.article
+              key={index}
+              className="card-premium"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <header className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
+                <div>
+                  <h3 className="text-xl font-display font-medium text-foreground mb-2">
+                    {exp.position}
+                  </h3>
+                  <div className="flex items-center gap-2 text-primary mb-2">
+                    <Building className="w-4 h-4" />
+                    <span className="font-medium">{exp.company}</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col lg:items-end gap-1 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <time>{exp.period}</time>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>{exp.location}</span>
+                  </div>
+                </div>
+              </header>
+
+              <ul className="space-y-2" role="list">
+                {exp.achievements.map((achievement, achIndex) => (
+                  <li
+                    key={achIndex}
+                    className="flex items-start gap-3 text-muted-foreground"
+                  >
+                    <div
+                      className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"
+                      aria-hidden="true"
+                    ></div>
+                    <span>{achievement}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.article>
+          ))}
+        </div>
+      </div>
+    </motion.section>
+  );
+}
+
+```
+
+## 📄 components\portfolio\HeroSection.tsx
+
+```tsx
+"use client";
+
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin, ExternalLink, ArrowDown } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
+import { PDFExport } from "../PDFExport";
+import Image from "next/image";
+import { siteConfig } from "@/types/site";
+import { ModeToggle } from "../ModeToggle";
+
+export function HeroSection() {
+  const scrollToSection = (sectionId: string) => {
+    if (typeof window !== "undefined") {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  if (siteConfig.hero.variant === "minimal") {
+    return (
+      <header className="section-spacing">
+        <div className="absolute top-6 right-6 flex gap-2">
+          <PDFExport />
+          <ModeToggle />
+        </div>
+
+        <motion.div
+          className="text-center max-w-2xl mx-auto px-4"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h1
+            className="text-5xl font-display font-bold mb-4"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {siteConfig.hero.title}
+          </motion.h1>
+
+          <motion.h2
+            className="text-xl md:text-2xl font-display text-muted-foreground mb-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            {siteConfig.hero.subtitle}
+          </motion.h2>
+
+          <motion.p
+            className="text-lg text-muted-foreground mb-10 max-w-lg mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {siteConfig.hero.description}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <Button
+              size="lg"
+              className="btn-professional mr-4"
+              onClick={() => scrollToSection("projects")}
+            >
+              {siteConfig.hero.ctaText}
+              <ArrowDown className="w-4 h-4 ml-2" />
+            </Button>
+
+            <Button size="lg" variant="outline" asChild>
+              <a href={`mailto:${siteConfig.email}`}>Contactez-moi</a>
+            </Button>
+          </motion.div>
+        </motion.div>
+      </header>
+    );
+  }
+
+  return (
+    <header className="section-spacing">
+      <div className="absolute top-6 right-6 flex gap-2 z-10">
+        <PDFExport />
+        <ModeToggle />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <motion.div
+            className="relative inline-block mb-8"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="relative inline-block mb-6">
+              <Image
+                src={siteConfig.profileImage}
+                alt="Photo de profil"
+                width={128}
+                height={128}
+                className="rounded-full mx-auto object-cover border-4 border-primary shadow-glow"
+                priority
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-10 animate-pulse"></div>
+              <div className="absolute -inset-2 rounded-full bg-gradient-primary opacity-20 blur-xl animate-glow-pulse"></div>
+            </div>
+          </motion.div>
+
+          <motion.h1
+            className="text-5xl font-display font-bold mb-4 md:text-6xl text-primary"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {siteConfig.name}
+          </motion.h1>
+
+          <motion.h2
+            className="text-2xl font-display text-foreground mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            {siteConfig.hero.subtitle}
+          </motion.h2>
+
+          <motion.div
+            className="flex flex-wrap justify-center gap-6 mb-8 text-muted-foreground"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <div className="flex items-center gap-2">
+              <Mail className="w-4 h-4" />
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="hover:text-primary transition-colors"
+              >
+                {siteConfig.email}
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4" />
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="hover:text-primary transition-colors"
+              >
+                {siteConfig.phone}
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4" />
+              <span>{siteConfig.location}</span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="flex justify-center gap-4 flex-wrap"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <Button variant="outline" size="lg" asChild>
+              <a
+                href={siteConfig.socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300"
+                aria-label={`Visiter mon profil LinkedIn (ouvre dans un nouvel onglet)`}
+              >
+                <FaLinkedin className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                LinkedIn
+              </a>
+            </Button>
+
+            <Button variant="outline" size="lg" asChild>
+              <a
+                href={siteConfig.socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300"
+                aria-label={`Visiter mon profil GitHub (ouvre dans un nouvel onglet)`}
+              >
+                <FaGithub className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                GitHub
+              </a>
+            </Button>
+
+            <Button variant="outline" size="lg" asChild>
+              <a
+                href={siteConfig.socialLinks.portfolioDesign}
+                className="group text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300"
+                aria-label="Voir mon portfolio design"
+              >
+                <ExternalLink className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Portfolio Design
+              </a>
+            </Button>
+          </motion.div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+```
+
+## 📄 components\portfolio\ProjectsSection.tsx
+
+```tsx
+"use client";
+
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
+import { siteConfig } from "@/types/site";
+
+export function ProjectsSection() {
+  return (
+    <motion.section
+      id="projects"
+      className="section-spacing"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-4xl mx-auto px-4">
+        <motion.h2
+          className="text-3xl font-display font-semibold mb-12 text-center text-primary"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Projets Phares
+        </motion.h2>
+
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          {siteConfig.projects.map((project, index) => {
+            const projectSlug = project.title
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/(^-|-$)/g, "");
+
+            return (
+              <motion.article
+                key={index}
+                className="card-premium group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+              >
+                <header className="mb-4">
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-xl font-display font-medium text-foreground group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <Badge
+                      variant={
+                        project.status === "Terminé" ? "default" : "secondary"
+                      }
+                      className={
+                        project.status === "Terminé"
+                          ? "bg-green-500/20 text-green-400 border-green-500/30"
+                          : "bg-primary/20 text-primary border-primary/30"
+                      }
+                    >
+                      {project.status}
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-primary font-medium mb-3">
+                    {project.type}
+                  </p>
+                </header>
+
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                <div
+                  className="flex flex-wrap gap-2 mb-6"
+                  role="list"
+                  aria-label="Technologies utilisées"
+                >
+                  {project.technologies.map((tech, techIndex) => (
+                    <Badge
+                      key={techIndex}
+                      variant="outline"
+                      className="tech-badge bg-secondary/50 text-foreground border-border/50"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+
+                <footer className="flex gap-3">
+                  {/* Lien interne vers projet */}
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex-1 hover:bg-primary/10 hover:border-primary/50 transition-all"
+                    asChild
+                  >
+                    <Link
+                      href={`/projects/${projectSlug}`}
+                      className="text-muted-foreground hover:text-primary flex items-center"
+                      aria-label={`En savoir plus sur ${project.title}`}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      En savoir plus
+                    </Link>
+                  </Button>
+
+                  {/* Lien externe vers GitHub */}
+                  {project.github && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="hover:bg-secondary/20 hover:text-primary transition-colors"
+                      asChild
+                    >
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Code source de ${project.title} (ouvre dans un nouvel onglet)`}
+                        className="flex items-center"
+                      >
+                        <FaGithub className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>
+                  )}
+                </footer>
+              </motion.article>
+            );
+          })}
+        </div>
+
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <article className="card-premium">
+            <h3 className="text-xl font-display font-medium text-foreground mb-4">
+              Portfolio Créatif
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Découvrez mes créations graphiques, affiches et vidéos réalisées
+              pour divers projets et clients.
+            </p>
+
+            <Button className="btn-professional" asChild>
+              <a
+                href={siteConfig.socialLinks.portfolioDesign}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+                aria-label="Voir mon portfolio design"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Voir Portfolio Design
+              </a>
+            </Button>
+          </article>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+```
+
+## 📄 components\portfolio\SkillsSection.tsx
+
+```tsx
+"use client";
+
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/types/site";
+
+export function SkillsSection() {
+  return (
+    <motion.section
+      className="section-spacing"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-4xl mx-auto px-4">
+        <motion.h2
+          className="text-3xl font-display font-semibold mb-12 text-center gradient-text"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          Compétences
+        </motion.h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <motion.article
+            className="card-premium"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="text-xl font-display font-medium mb-6 text-foreground">
+              Compétences Techniques
+            </h3>
+            <ul className="flex flex-wrap gap-3" role="list">
+              {siteConfig.skills.technical.map((skill, index) => (
+                <li key={index}>
+                  <Badge
+                    variant="secondary"
+                    className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors px-3 py-1"
+                  >
+                    {skill}
+                  </Badge>
+                </li>
+              ))}
+            </ul>
+          </motion.article>
+
+          <motion.article
+            className="card-premium"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <h3 className="text-xl font-display font-medium mb-6 text-foreground">
+              Compétences Transversales
+            </h3>
+            <ul className="flex flex-wrap gap-3" role="list">
+              {siteConfig.skills.soft.map((skill, index) => (
+                <li key={index}>
+                  <Badge
+                    variant="outline"
+                    className="border-muted-foreground/30 text-muted-foreground hover:border-primary hover:text-primary transition-colors px-3 py-1"
+                  >
+                    {skill}
+                  </Badge>
+                </li>
+              ))}
+            </ul>
+          </motion.article>
+        </div>
+      </div>
+    </motion.section>
+  );
+}
+
+```
+
+## 📄 components\SkipLink.tsx
+
+```tsx
+import React from "react";
+
+const SkipLink = () => {
+  return (
+    <a href="#main-content" className="skip-link">
+      Aller au contenu principal
+    </a>
+  );
+};
+
+export default SkipLink;
+
+```
+
+## 📄 components\theme-provider.tsx
+
+```tsx
+"use client";
+
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+
+export function ThemeProvider({
+  children,
+  ...props
+}: React.ComponentProps<typeof NextThemesProvider>) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+}
+
+```
+
+## 📄 components\ui\badge.tsx
+
+```tsx
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
+
+import { cn } from "@/lib/utils"
+
+const badgeVariants = cva(
+  "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
+  {
+    variants: {
+      variant: {
+        default:
+          "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
+        secondary:
+          "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
+        destructive:
+          "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+        outline:
+          "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+)
+
+function Badge({
+  className,
+  variant,
+  asChild = false,
+  ...props
+}: React.ComponentProps<"span"> &
+  VariantProps<typeof badgeVariants> & { asChild?: boolean }) {
+  const Comp = asChild ? Slot : "span"
+
+  return (
+    <Comp
+      data-slot="badge"
+      className={cn(badgeVariants({ variant }), className)}
+      {...props}
+    />
+  )
+}
+
+export { Badge, badgeVariants }
+
+```
+
+## 📄 components\ui\button.tsx
+
+```tsx
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
+
+import { cn } from "@/lib/utils"
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  {
+    variants: {
+      variant: {
+        default:
+          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+        outline:
+          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+        secondary:
+          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+        ghost:
+          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-9 px-4 py-2 has-[>svg]:px-3",
+        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        icon: "size-9",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
+
+function Button({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean
+  }) {
+  const Comp = asChild ? Slot : "button"
+
+  return (
+    <Comp
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  )
+}
+
+export { Button, buttonVariants }
+
+```
+
+## 📄 components\ui\dropdown-menu.tsx
+
+```tsx
+"use client"
+
+import * as React from "react"
+import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
+import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+function DropdownMenu({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Root>) {
+  return <DropdownMenuPrimitive.Root data-slot="dropdown-menu" {...props} />
+}
+
+function DropdownMenuPortal({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Portal>) {
+  return (
+    <DropdownMenuPrimitive.Portal data-slot="dropdown-menu-portal" {...props} />
+  )
+}
+
+function DropdownMenuTrigger({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Trigger>) {
+  return (
+    <DropdownMenuPrimitive.Trigger
+      data-slot="dropdown-menu-trigger"
+      {...props}
+    />
+  )
+}
+
+function DropdownMenuContent({
+  className,
+  sideOffset = 4,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Content>) {
+  return (
+    <DropdownMenuPrimitive.Portal>
+      <DropdownMenuPrimitive.Content
+        data-slot="dropdown-menu-content"
+        sideOffset={sideOffset}
+        className={cn(
+          "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 max-h-(--radix-dropdown-menu-content-available-height) min-w-[8rem] origin-(--radix-dropdown-menu-content-transform-origin) overflow-x-hidden overflow-y-auto rounded-md border p-1 shadow-md",
+          className
+        )}
+        {...props}
+      />
+    </DropdownMenuPrimitive.Portal>
+  )
+}
+
+function DropdownMenuGroup({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Group>) {
+  return (
+    <DropdownMenuPrimitive.Group data-slot="dropdown-menu-group" {...props} />
+  )
+}
+
+function DropdownMenuItem({
+  className,
+  inset,
+  variant = "default",
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Item> & {
+  inset?: boolean
+  variant?: "default" | "destructive"
+}) {
+  return (
+    <DropdownMenuPrimitive.Item
+      data-slot="dropdown-menu-item"
+      data-inset={inset}
+      data-variant={variant}
+      className={cn(
+        "focus:bg-accent focus:text-accent-foreground data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 dark:data-[variant=destructive]:focus:bg-destructive/20 data-[variant=destructive]:focus:text-destructive data-[variant=destructive]:*:[svg]:!text-destructive [&_svg:not([class*='text-'])]:text-muted-foreground relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:pl-8 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function DropdownMenuCheckboxItem({
+  className,
+  children,
+  checked,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.CheckboxItem>) {
+  return (
+    <DropdownMenuPrimitive.CheckboxItem
+      data-slot="dropdown-menu-checkbox-item"
+      className={cn(
+        "focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        className
+      )}
+      checked={checked}
+      {...props}
+    >
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
+        <DropdownMenuPrimitive.ItemIndicator>
+          <CheckIcon className="size-4" />
+        </DropdownMenuPrimitive.ItemIndicator>
+      </span>
+      {children}
+    </DropdownMenuPrimitive.CheckboxItem>
+  )
+}
+
+function DropdownMenuRadioGroup({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.RadioGroup>) {
+  return (
+    <DropdownMenuPrimitive.RadioGroup
+      data-slot="dropdown-menu-radio-group"
+      {...props}
+    />
+  )
+}
+
+function DropdownMenuRadioItem({
+  className,
+  children,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.RadioItem>) {
+  return (
+    <DropdownMenuPrimitive.RadioItem
+      data-slot="dropdown-menu-radio-item"
+      className={cn(
+        "focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+        className
+      )}
+      {...props}
+    >
+      <span className="pointer-events-none absolute left-2 flex size-3.5 items-center justify-center">
+        <DropdownMenuPrimitive.ItemIndicator>
+          <CircleIcon className="size-2 fill-current" />
+        </DropdownMenuPrimitive.ItemIndicator>
+      </span>
+      {children}
+    </DropdownMenuPrimitive.RadioItem>
+  )
+}
+
+function DropdownMenuLabel({
+  className,
+  inset,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Label> & {
+  inset?: boolean
+}) {
+  return (
+    <DropdownMenuPrimitive.Label
+      data-slot="dropdown-menu-label"
+      data-inset={inset}
+      className={cn(
+        "px-2 py-1.5 text-sm font-medium data-[inset]:pl-8",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function DropdownMenuSeparator({
+  className,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Separator>) {
+  return (
+    <DropdownMenuPrimitive.Separator
+      data-slot="dropdown-menu-separator"
+      className={cn("bg-border -mx-1 my-1 h-px", className)}
+      {...props}
+    />
+  )
+}
+
+function DropdownMenuShortcut({
+  className,
+  ...props
+}: React.ComponentProps<"span">) {
+  return (
+    <span
+      data-slot="dropdown-menu-shortcut"
+      className={cn(
+        "text-muted-foreground ml-auto text-xs tracking-widest",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function DropdownMenuSub({
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.Sub>) {
+  return <DropdownMenuPrimitive.Sub data-slot="dropdown-menu-sub" {...props} />
+}
+
+function DropdownMenuSubTrigger({
+  className,
+  inset,
+  children,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.SubTrigger> & {
+  inset?: boolean
+}) {
+  return (
+    <DropdownMenuPrimitive.SubTrigger
+      data-slot="dropdown-menu-sub-trigger"
+      data-inset={inset}
+      className={cn(
+        "focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground flex cursor-default items-center rounded-sm px-2 py-1.5 text-sm outline-hidden select-none data-[inset]:pl-8",
+        className
+      )}
+      {...props}
+    >
+      {children}
+      <ChevronRightIcon className="ml-auto size-4" />
+    </DropdownMenuPrimitive.SubTrigger>
+  )
+}
+
+function DropdownMenuSubContent({
+  className,
+  ...props
+}: React.ComponentProps<typeof DropdownMenuPrimitive.SubContent>) {
+  return (
+    <DropdownMenuPrimitive.SubContent
+      data-slot="dropdown-menu-sub-content"
+      className={cn(
+        "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 min-w-[8rem] origin-(--radix-dropdown-menu-content-transform-origin) overflow-hidden rounded-md border p-1 shadow-lg",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+export {
+  DropdownMenu,
+  DropdownMenuPortal,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuLabel,
+  DropdownMenuItem,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+}
+
+```
+
+## 📄 components\ui\input.tsx
+
+```tsx
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+  return (
+    <input
+      type={type}
+      data-slot="input"
+      className={cn(
+        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+export { Input }
+
+```
+
+## 📄 components\ui\label.tsx
+
+```tsx
+"use client"
+
+import * as React from "react"
+import * as LabelPrimitive from "@radix-ui/react-label"
+
+import { cn } from "@/lib/utils"
+
+function Label({
+  className,
+  ...props
+}: React.ComponentProps<typeof LabelPrimitive.Root>) {
+  return (
+    <LabelPrimitive.Root
+      data-slot="label"
+      className={cn(
+        "flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+export { Label }
+
+```
+
+## 📄 components\ui\sonner.tsx
+
+```tsx
+"use client"
+
+import { useTheme } from "next-themes"
+import { Toaster as Sonner, ToasterProps } from "sonner"
+
+const Toaster = ({ ...props }: ToasterProps) => {
+  const { theme = "system" } = useTheme()
+
+  return (
+    <Sonner
+      theme={theme as ToasterProps["theme"]}
+      className="toaster group"
+      style={
+        {
+          "--normal-bg": "var(--popover)",
+          "--normal-text": "var(--popover-foreground)",
+          "--normal-border": "var(--border)",
+        } as React.CSSProperties
+      }
+      {...props}
+    />
+  )
+}
+
+export { Toaster }
+
+```
+
+## 📄 components\ui\textarea.tsx
+
+```tsx
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
+  return (
+    <textarea
+      data-slot="textarea"
+      className={cn(
+        "border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+export { Textarea }
+
+```
+
+## 📄 components.json
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "iconLibrary": "lucide",
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  }
+}
+
+```
+
+## 📄 dump-project.js
+
+```js
+import fs from "fs";
+import path from "path";
+
+const rootDir = process.cwd(); // ton projet actuel
+const outputFile = path.join(rootDir, "PROJECT_DUMP.md");
+
+// Extensions à inclure (tu peux adapter)
+const allowedExtensions = [
+  ".js",
+  ".ts",
+  ".tsx",
+  ".jsx",
+  ".json",
+  ".css",
+  ".md",
+];
+
+// Fonction récursive pour parcourir le projet
+function readDirRecursive(dir, files = []) {
+  for (const file of fs.readdirSync(dir)) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      if (file === "node_modules" || file.startsWith(".")) continue; // ignore
+      readDirRecursive(filePath, files);
+    } else {
+      if (allowedExtensions.includes(path.extname(file))) {
+        files.push(filePath);
+      }
+    }
+  }
+  return files;
+}
+
+// Génération du dump
+function generateDump() {
+  const files = readDirRecursive(rootDir);
+  let content = "# 📦 Project Dump\n\n";
+
+  for (const file of files) {
+    const relativePath = path.relative(rootDir, file);
+    const code = fs.readFileSync(file, "utf-8");
+    content += `\n## 📄 ${relativePath}\n\n`;
+    content += "```" + path.extname(file).slice(1) + "\n";
+    content += code + "\n";
+    content += "```\n";
+  }
+
+  fs.writeFileSync(outputFile, content, "utf-8");
+  console.log(`✅ Dump écrit dans ${outputFile}`);
+}
+
+generateDump();
+
+```
+
+## 📄 lib\utils.ts
+
+```ts
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+```
+
+## 📄 next-env.d.ts
+
+```ts
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
+/// <reference path="./.next/types/routes.d.ts" />
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/api-reference/config/typescript for more information.
+
+```
+
+## 📄 next.config.ts
+
+```ts
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;
+
+```
+
+## 📄 package-lock.json
+
+```json
 {
   "name": "nextfolio_pro",
   "version": "0.1.0",
@@ -15,7 +2632,6 @@
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "framer-motion": "^12.23.12",
-        "gpt4all": "^4.0.0",
         "lucide-react": "^0.542.0",
         "next": "15.5.2",
         "next-themes": "^0.4.6",
@@ -272,13 +2888,6 @@
       "resolved": "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.10.tgz",
       "integrity": "sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==",
       "license": "MIT"
-    },
-    "node_modules/@gar/promisify": {
-      "version": "1.1.3",
-      "resolved": "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz",
-      "integrity": "sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==",
-      "license": "MIT",
-      "optional": true
     },
     "node_modules/@humanfs/core": {
       "version": "0.19.1",
@@ -1030,48 +3639,6 @@
       "license": "MIT",
       "engines": {
         "node": ">=12.4.0"
-      }
-    },
-    "node_modules/@npmcli/fs": {
-      "version": "2.1.2",
-      "resolved": "https://registry.npmjs.org/@npmcli/fs/-/fs-2.1.2.tgz",
-      "integrity": "sha512-yOJKRvohFOaLqipNtwYB9WugyZKhC/DZC4VYPmpaCzDBrA8YpK3qHZ8/HGscMnE4GqbkLNuVcCnxkeQEdGt6LQ==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "@gar/promisify": "^1.1.3",
-        "semver": "^7.3.5"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      }
-    },
-    "node_modules/@npmcli/move-file": {
-      "version": "2.0.1",
-      "resolved": "https://registry.npmjs.org/@npmcli/move-file/-/move-file-2.0.1.tgz",
-      "integrity": "sha512-mJd2Z5TjYWq/ttPLLGqArdtnC74J6bOzg4rMDnN+p1xTacZ2yPRCk2y0oSWQtygLR9YVQXgOcONrwtnk3JupxQ==",
-      "deprecated": "This functionality has been moved to @npmcli/fs",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "mkdirp": "^1.0.4",
-        "rimraf": "^3.0.2"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      }
-    },
-    "node_modules/@npmcli/move-file/node_modules/mkdirp": {
-      "version": "1.0.4",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
-      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
-      "license": "MIT",
-      "optional": true,
-      "bin": {
-        "mkdirp": "bin/cmd.js"
-      },
-      "engines": {
-        "node": ">=10"
       }
     },
     "node_modules/@radix-ui/primitive": {
@@ -2109,16 +4676,6 @@
         "tailwindcss": "4.1.12"
       }
     },
-    "node_modules/@tootallnate/once": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/@tootallnate/once/-/once-2.0.0.tgz",
-      "integrity": "sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">= 10"
-      }
-    },
     "node_modules/@tybys/wasm-util": {
       "version": "0.10.0",
       "resolved": "https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.0.tgz",
@@ -2738,13 +5295,6 @@
         "win32"
       ]
     },
-    "node_modules/abbrev": {
-      "version": "1.1.1",
-      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-      "license": "ISC",
-      "optional": true
-    },
     "node_modules/abs-svg-path": {
       "version": "0.1.1",
       "resolved": "https://registry.npmjs.org/abs-svg-path/-/abs-svg-path-0.1.1.tgz",
@@ -2774,46 +5324,6 @@
         "acorn": "^6.0.0 || ^7.0.0 || ^8.0.0"
       }
     },
-    "node_modules/agent-base": {
-      "version": "6.0.2",
-      "resolved": "https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz",
-      "integrity": "sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "debug": "4"
-      },
-      "engines": {
-        "node": ">= 6.0.0"
-      }
-    },
-    "node_modules/agentkeepalive": {
-      "version": "4.6.0",
-      "resolved": "https://registry.npmjs.org/agentkeepalive/-/agentkeepalive-4.6.0.tgz",
-      "integrity": "sha512-kja8j7PjmncONqaTsB8fQ+wE2mSU2DJ9D4XKoJ5PFWIdRMa6SLSN1ff4mOr4jCbfRSsxR4keIiySJU0N9T5hIQ==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "humanize-ms": "^1.2.1"
-      },
-      "engines": {
-        "node": ">= 8.0.0"
-      }
-    },
-    "node_modules/aggregate-error": {
-      "version": "3.1.0",
-      "resolved": "https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz",
-      "integrity": "sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "clean-stack": "^2.0.0",
-        "indent-string": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
     "node_modules/ajv": {
       "version": "6.12.6",
       "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz",
@@ -2831,16 +5341,6 @@
         "url": "https://github.com/sponsors/epoberezkin"
       }
     },
-    "node_modules/ansi-regex": {
-      "version": "5.0.1",
-      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
-      "integrity": "sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">=8"
-      }
-    },
     "node_modules/ansi-styles": {
       "version": "4.3.0",
       "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
@@ -2855,28 +5355,6 @@
       },
       "funding": {
         "url": "https://github.com/chalk/ansi-styles?sponsor=1"
-      }
-    },
-    "node_modules/aproba": {
-      "version": "2.1.0",
-      "resolved": "https://registry.npmjs.org/aproba/-/aproba-2.1.0.tgz",
-      "integrity": "sha512-tLIEcj5GuR2RSTnxNKdkK0dJ/GrC7P38sUkiDmDuHfsHmbagTFAxDVIBltoklXEVIQ/f14IL8IMJ5pn9Hez1Ew==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/are-we-there-yet": {
-      "version": "3.0.1",
-      "resolved": "https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-3.0.1.tgz",
-      "integrity": "sha512-QZW4EDmGwlYur0Yyf/b2uGucHQMa8aFUP7eu9ddR73vvhFyt4V0Vl3QHPcTNJ8l6qYOBdxgXdnBXQrHilfRQBg==",
-      "deprecated": "This package is no longer supported.",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "delegates": "^1.0.0",
-        "readable-stream": "^3.6.0"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
       }
     },
     "node_modules/argparse": {
@@ -3125,7 +5603,7 @@
       "version": "1.0.2",
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz",
       "integrity": "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==",
-      "devOptional": true,
+      "dev": true,
       "license": "MIT"
     },
     "node_modules/base64-js": {
@@ -3161,7 +5639,7 @@
       "version": "1.1.12",
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.12.tgz",
       "integrity": "sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==",
-      "devOptional": true,
+      "dev": true,
       "license": "MIT",
       "dependencies": {
         "balanced-match": "^1.0.0",
@@ -3198,165 +5676,6 @@
       "dependencies": {
         "pako": "~1.0.5"
       }
-    },
-    "node_modules/cacache": {
-      "version": "16.1.3",
-      "resolved": "https://registry.npmjs.org/cacache/-/cacache-16.1.3.tgz",
-      "integrity": "sha512-/+Emcj9DAXxX4cwlLmRI9c166RuL3w30zp4R7Joiv2cQTtTtA+jeuCAjH3ZlGnYS3tKENSrKhAzVVP9GVyzeYQ==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "@npmcli/fs": "^2.1.0",
-        "@npmcli/move-file": "^2.0.0",
-        "chownr": "^2.0.0",
-        "fs-minipass": "^2.1.0",
-        "glob": "^8.0.1",
-        "infer-owner": "^1.0.4",
-        "lru-cache": "^7.7.1",
-        "minipass": "^3.1.6",
-        "minipass-collect": "^1.0.2",
-        "minipass-flush": "^1.0.5",
-        "minipass-pipeline": "^1.2.4",
-        "mkdirp": "^1.0.4",
-        "p-map": "^4.0.0",
-        "promise-inflight": "^1.0.1",
-        "rimraf": "^3.0.2",
-        "ssri": "^9.0.0",
-        "tar": "^6.1.11",
-        "unique-filename": "^2.0.0"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      }
-    },
-    "node_modules/cacache/node_modules/brace-expansion": {
-      "version": "2.0.2",
-      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.2.tgz",
-      "integrity": "sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "balanced-match": "^1.0.0"
-      }
-    },
-    "node_modules/cacache/node_modules/chownr": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz",
-      "integrity": "sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==",
-      "license": "ISC",
-      "optional": true,
-      "engines": {
-        "node": ">=10"
-      }
-    },
-    "node_modules/cacache/node_modules/glob": {
-      "version": "8.1.0",
-      "resolved": "https://registry.npmjs.org/glob/-/glob-8.1.0.tgz",
-      "integrity": "sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==",
-      "deprecated": "Glob versions prior to v9 are no longer supported",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "fs.realpath": "^1.0.0",
-        "inflight": "^1.0.4",
-        "inherits": "2",
-        "minimatch": "^5.0.1",
-        "once": "^1.3.0"
-      },
-      "engines": {
-        "node": ">=12"
-      },
-      "funding": {
-        "url": "https://github.com/sponsors/isaacs"
-      }
-    },
-    "node_modules/cacache/node_modules/minimatch": {
-      "version": "5.1.6",
-      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-5.1.6.tgz",
-      "integrity": "sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "brace-expansion": "^2.0.1"
-      },
-      "engines": {
-        "node": ">=10"
-      }
-    },
-    "node_modules/cacache/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/cacache/node_modules/minizlib": {
-      "version": "2.1.2",
-      "resolved": "https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz",
-      "integrity": "sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.0.0",
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">= 8"
-      }
-    },
-    "node_modules/cacache/node_modules/mkdirp": {
-      "version": "1.0.4",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
-      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
-      "license": "MIT",
-      "optional": true,
-      "bin": {
-        "mkdirp": "bin/cmd.js"
-      },
-      "engines": {
-        "node": ">=10"
-      }
-    },
-    "node_modules/cacache/node_modules/tar": {
-      "version": "6.2.1",
-      "resolved": "https://registry.npmjs.org/tar/-/tar-6.2.1.tgz",
-      "integrity": "sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "chownr": "^2.0.0",
-        "fs-minipass": "^2.0.0",
-        "minipass": "^5.0.0",
-        "minizlib": "^2.1.1",
-        "mkdirp": "^1.0.3",
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=10"
-      }
-    },
-    "node_modules/cacache/node_modules/tar/node_modules/minipass": {
-      "version": "5.0.0",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz",
-      "integrity": "sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==",
-      "license": "ISC",
-      "optional": true,
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/cacache/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
     },
     "node_modules/call-bind": {
       "version": "1.0.8",
@@ -3477,16 +5796,6 @@
         "url": "https://polar.sh/cva"
       }
     },
-    "node_modules/clean-stack": {
-      "version": "2.2.0",
-      "resolved": "https://registry.npmjs.org/clean-stack/-/clean-stack-2.2.0.tgz",
-      "integrity": "sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">=6"
-      }
-    },
     "node_modules/client-only": {
       "version": "0.0.1",
       "resolved": "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz",
@@ -3554,29 +5863,12 @@
         "simple-swizzle": "^0.2.2"
       }
     },
-    "node_modules/color-support": {
-      "version": "1.1.3",
-      "resolved": "https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz",
-      "integrity": "sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==",
-      "license": "ISC",
-      "optional": true,
-      "bin": {
-        "color-support": "bin.js"
-      }
-    },
     "node_modules/concat-map": {
       "version": "0.0.1",
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
       "integrity": "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==",
-      "devOptional": true,
+      "dev": true,
       "license": "MIT"
-    },
-    "node_modules/console-control-strings": {
-      "version": "1.1.0",
-      "resolved": "https://registry.npmjs.org/console-control-strings/-/console-control-strings-1.1.0.tgz",
-      "integrity": "sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==",
-      "license": "ISC",
-      "optional": true
     },
     "node_modules/cross-spawn": {
       "version": "7.0.6",
@@ -3671,7 +5963,7 @@
       "version": "4.4.1",
       "resolved": "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz",
       "integrity": "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==",
-      "devOptional": true,
+      "dev": true,
       "license": "MIT",
       "dependencies": {
         "ms": "^2.1.3"
@@ -3727,13 +6019,6 @@
       "funding": {
         "url": "https://github.com/sponsors/ljharb"
       }
-    },
-    "node_modules/delegates": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/delegates/-/delegates-1.0.0.tgz",
-      "integrity": "sha512-bd2L678uiWATM6m5Z1VzNCErI3jiGzt6HGY8OVICs40JQq/HALfbyNJmp0UDakEY4pMMaN0Ly5om/B1VI/+xfQ==",
-      "license": "MIT",
-      "optional": true
     },
     "node_modules/detect-libc": {
       "version": "2.0.4",
@@ -3792,16 +6077,6 @@
       "dev": true,
       "license": "MIT"
     },
-    "node_modules/encoding": {
-      "version": "0.1.13",
-      "resolved": "https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz",
-      "integrity": "sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "iconv-lite": "^0.6.2"
-      }
-    },
     "node_modules/enhanced-resolve": {
       "version": "5.18.3",
       "resolved": "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.18.3.tgz",
@@ -3815,23 +6090,6 @@
       "engines": {
         "node": ">=10.13.0"
       }
-    },
-    "node_modules/env-paths": {
-      "version": "2.2.1",
-      "resolved": "https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz",
-      "integrity": "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">=6"
-      }
-    },
-    "node_modules/err-code": {
-      "version": "2.0.3",
-      "resolved": "https://registry.npmjs.org/err-code/-/err-code-2.0.3.tgz",
-      "integrity": "sha512-2bmlRpNKBxT/CRmPOlyISQpNj+qSeYvcym/uT0Jx2bMOlKLtSy1ZmLuVxSEKKyor/N5yhvp/ZiG1oE3DEYMSFA==",
-      "license": "MIT",
-      "optional": true
     },
     "node_modules/es-abstract": {
       "version": "1.24.0",
@@ -4458,13 +6716,6 @@
         "node": ">=0.8.x"
       }
     },
-    "node_modules/exponential-backoff": {
-      "version": "3.1.2",
-      "resolved": "https://registry.npmjs.org/exponential-backoff/-/exponential-backoff-3.1.2.tgz",
-      "integrity": "sha512-8QxYTVXUkuy7fIIoitQkPwGonB8F3Zj8eEO8Sqg9Zv/bkI7RJAzowee4gr81Hak/dUTpA2Z7VfQgoijjPNlUZA==",
-      "license": "Apache-2.0",
-      "optional": true
-    },
     "node_modules/fast-deep-equal": {
       "version": "3.1.3",
       "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
@@ -4649,46 +6900,6 @@
         }
       }
     },
-    "node_modules/fs-minipass": {
-      "version": "2.1.0",
-      "resolved": "https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz",
-      "integrity": "sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.0.0"
-      },
-      "engines": {
-        "node": ">= 8"
-      }
-    },
-    "node_modules/fs-minipass/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/fs-minipass/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/fs.realpath": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
-      "integrity": "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==",
-      "license": "ISC",
-      "optional": true
-    },
     "node_modules/function-bind": {
       "version": "1.1.2",
       "resolved": "https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz",
@@ -4728,27 +6939,6 @@
       "license": "MIT",
       "funding": {
         "url": "https://github.com/sponsors/ljharb"
-      }
-    },
-    "node_modules/gauge": {
-      "version": "4.0.4",
-      "resolved": "https://registry.npmjs.org/gauge/-/gauge-4.0.4.tgz",
-      "integrity": "sha512-f9m+BEN5jkg6a0fZjleidjN51VE1X+mPFQ2DJ0uv1V39oCLCbsGe6yjbBnp7eK7z/+GAon99a3nHuqbuuthyPg==",
-      "deprecated": "This package is no longer supported.",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "aproba": "^1.0.3 || ^2.0.0",
-        "color-support": "^1.1.3",
-        "console-control-strings": "^1.1.0",
-        "has-unicode": "^2.0.1",
-        "signal-exit": "^3.0.7",
-        "string-width": "^4.2.3",
-        "strip-ansi": "^6.0.1",
-        "wide-align": "^1.1.5"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
       }
     },
     "node_modules/get-intrinsic": {
@@ -4830,28 +7020,6 @@
         "url": "https://github.com/privatenumber/get-tsconfig?sponsor=1"
       }
     },
-    "node_modules/glob": {
-      "version": "7.2.3",
-      "resolved": "https://registry.npmjs.org/glob/-/glob-7.2.3.tgz",
-      "integrity": "sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==",
-      "deprecated": "Glob versions prior to v9 are no longer supported",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "fs.realpath": "^1.0.0",
-        "inflight": "^1.0.4",
-        "inherits": "2",
-        "minimatch": "^3.1.1",
-        "once": "^1.3.0",
-        "path-is-absolute": "^1.0.0"
-      },
-      "engines": {
-        "node": "*"
-      },
-      "funding": {
-        "url": "https://github.com/sponsors/isaacs"
-      }
-    },
     "node_modules/glob-parent": {
       "version": "6.0.2",
       "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-6.0.2.tgz",
@@ -4908,28 +7076,11 @@
         "url": "https://github.com/sponsors/ljharb"
       }
     },
-    "node_modules/gpt4all": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/gpt4all/-/gpt4all-4.0.0.tgz",
-      "integrity": "sha512-ArXOR/CU9fUVGSn7auUjs/oD2nnpbAWjA807svh3KGFTLM9PpuJs0r8werv7Pw+Jsl+kH1THcst8OXGSu/zjAA==",
-      "hasInstallScript": true,
-      "dependencies": {
-        "md5-file": "^5.0.0",
-        "node-addon-api": "^6.1.0",
-        "node-gyp-build": "^4.6.0"
-      },
-      "engines": {
-        "node": ">= 18.x.x"
-      },
-      "optionalDependencies": {
-        "node-gyp": "9.x.x"
-      }
-    },
     "node_modules/graceful-fs": {
       "version": "4.2.11",
       "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz",
       "integrity": "sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==",
-      "devOptional": true,
+      "dev": true,
       "license": "ISC"
     },
     "node_modules/graphemer": {
@@ -5020,13 +7171,6 @@
         "url": "https://github.com/sponsors/ljharb"
       }
     },
-    "node_modules/has-unicode": {
-      "version": "2.0.1",
-      "resolved": "https://registry.npmjs.org/has-unicode/-/has-unicode-2.0.1.tgz",
-      "integrity": "sha512-8Rf9Y83NBReMnx0gFzA8JImQACstCYWUplepDa9xprwwtmgEZUF0h/i5xSA625zB/I37EtrswSST6OXxwaaIJQ==",
-      "license": "ISC",
-      "optional": true
-    },
     "node_modules/hasown": {
       "version": "2.0.2",
       "resolved": "https://registry.npmjs.org/hasown/-/hasown-2.0.2.tgz",
@@ -5055,70 +7199,11 @@
       "integrity": "sha512-LgOWAkrN0rFaQpfdWBQlv/VhkOxb5AsBjk6NQVx4yEzWS923T07X0M1Y0VNko2H52HeSpZrZNNMJ0aFqsdVzQg==",
       "license": "ISC"
     },
-    "node_modules/http-cache-semantics": {
-      "version": "4.2.0",
-      "resolved": "https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.2.0.tgz",
-      "integrity": "sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ==",
-      "license": "BSD-2-Clause",
-      "optional": true
-    },
-    "node_modules/http-proxy-agent": {
-      "version": "5.0.0",
-      "resolved": "https://registry.npmjs.org/http-proxy-agent/-/http-proxy-agent-5.0.0.tgz",
-      "integrity": "sha512-n2hY8YdoRE1i7r6M0w9DIw5GgZN0G25P8zLCRQ8rjXtTU3vsNFBI/vWK/UIeE6g5MUUz6avwAPXmL6Fy9D/90w==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "@tootallnate/once": "2",
-        "agent-base": "6",
-        "debug": "4"
-      },
-      "engines": {
-        "node": ">= 6"
-      }
-    },
-    "node_modules/https-proxy-agent": {
-      "version": "5.0.1",
-      "resolved": "https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz",
-      "integrity": "sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "agent-base": "6",
-        "debug": "4"
-      },
-      "engines": {
-        "node": ">= 6"
-      }
-    },
-    "node_modules/humanize-ms": {
-      "version": "1.2.1",
-      "resolved": "https://registry.npmjs.org/humanize-ms/-/humanize-ms-1.2.1.tgz",
-      "integrity": "sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "ms": "^2.0.0"
-      }
-    },
     "node_modules/hyphen": {
       "version": "1.10.6",
       "resolved": "https://registry.npmjs.org/hyphen/-/hyphen-1.10.6.tgz",
       "integrity": "sha512-fXHXcGFTXOvZTSkPJuGOQf5Lv5T/R2itiiCVPg9LxAje5D00O0pP83yJShFq5V89Ly//Gt6acj7z8pbBr34stw==",
       "license": "ISC"
-    },
-    "node_modules/iconv-lite": {
-      "version": "0.6.3",
-      "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz",
-      "integrity": "sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "safer-buffer": ">= 2.1.2 < 3.0.0"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      }
     },
     "node_modules/ignore": {
       "version": "5.3.2",
@@ -5151,39 +7236,10 @@
       "version": "0.1.4",
       "resolved": "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz",
       "integrity": "sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==",
-      "devOptional": true,
+      "dev": true,
       "license": "MIT",
       "engines": {
         "node": ">=0.8.19"
-      }
-    },
-    "node_modules/indent-string": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz",
-      "integrity": "sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/infer-owner": {
-      "version": "1.0.4",
-      "resolved": "https://registry.npmjs.org/infer-owner/-/infer-owner-1.0.4.tgz",
-      "integrity": "sha512-IClj+Xz94+d7irH5qRyfJonOdfTzuDaifE6ZPWfx0N0+/ATZCbuTPq2prFl526urkQd90WyUKIh1DfBQ2hMz9A==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/inflight": {
-      "version": "1.0.6",
-      "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
-      "integrity": "sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==",
-      "deprecated": "This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "once": "^1.3.0",
-        "wrappy": "1"
       }
     },
     "node_modules/inherits": {
@@ -5205,16 +7261,6 @@
       },
       "engines": {
         "node": ">= 0.4"
-      }
-    },
-    "node_modules/ip-address": {
-      "version": "10.0.1",
-      "resolved": "https://registry.npmjs.org/ip-address/-/ip-address-10.0.1.tgz",
-      "integrity": "sha512-NWv9YLW4PoW2B7xtzaS3NCot75m6nK7Icdv0o3lfMceJVRfSoQwqD4wEH5rLwoKJwUiZ/rfpiVBhnaF0FK4HoA==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">= 12"
       }
     },
     "node_modules/is-array-buffer": {
@@ -5394,16 +7440,6 @@
         "url": "https://github.com/sponsors/ljharb"
       }
     },
-    "node_modules/is-fullwidth-code-point": {
-      "version": "3.0.0",
-      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
-      "integrity": "sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">=8"
-      }
-    },
     "node_modules/is-generator-function": {
       "version": "1.1.0",
       "resolved": "https://registry.npmjs.org/is-generator-function/-/is-generator-function-1.1.0.tgz",
@@ -5435,13 +7471,6 @@
       "engines": {
         "node": ">=0.10.0"
       }
-    },
-    "node_modules/is-lambda": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/is-lambda/-/is-lambda-1.0.1.tgz",
-      "integrity": "sha512-z7CMFGNrENq5iFB9Bqo64Xk6Y9sg+epq1myIcdHaGnbMTYOxvzsEtdYqQUylB7LxfkvgrrjP32T6Ywciio9UIQ==",
-      "license": "MIT",
-      "optional": true
     },
     "node_modules/is-map": {
       "version": "2.0.3",
@@ -5658,7 +7687,7 @@
       "version": "2.0.0",
       "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
       "integrity": "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==",
-      "devOptional": true,
+      "dev": true,
       "license": "ISC"
     },
     "node_modules/iterator.prototype": {
@@ -6104,16 +8133,6 @@
         "loose-envify": "cli.js"
       }
     },
-    "node_modules/lru-cache": {
-      "version": "7.18.3",
-      "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-7.18.3.tgz",
-      "integrity": "sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==",
-      "license": "ISC",
-      "optional": true,
-      "engines": {
-        "node": ">=12"
-      }
-    },
     "node_modules/lucide-react": {
       "version": "0.542.0",
       "resolved": "https://registry.npmjs.org/lucide-react/-/lucide-react-0.542.0.tgz",
@@ -6133,54 +8152,6 @@
         "@jridgewell/sourcemap-codec": "^1.5.5"
       }
     },
-    "node_modules/make-fetch-happen": {
-      "version": "10.2.1",
-      "resolved": "https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-10.2.1.tgz",
-      "integrity": "sha512-NgOPbRiaQM10DYXvN3/hhGVI2M5MtITFryzBGxHM5p4wnFxsVCbxkrBrDsk+EZ5OB4jEOT7AjDxtdF+KVEFT7w==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "agentkeepalive": "^4.2.1",
-        "cacache": "^16.1.0",
-        "http-cache-semantics": "^4.1.0",
-        "http-proxy-agent": "^5.0.0",
-        "https-proxy-agent": "^5.0.0",
-        "is-lambda": "^1.0.1",
-        "lru-cache": "^7.7.1",
-        "minipass": "^3.1.6",
-        "minipass-collect": "^1.0.2",
-        "minipass-fetch": "^2.0.3",
-        "minipass-flush": "^1.0.5",
-        "minipass-pipeline": "^1.2.4",
-        "negotiator": "^0.6.3",
-        "promise-retry": "^2.0.1",
-        "socks-proxy-agent": "^7.0.0",
-        "ssri": "^9.0.0"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      }
-    },
-    "node_modules/make-fetch-happen/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/make-fetch-happen/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
-    },
     "node_modules/math-intrinsics": {
       "version": "1.1.0",
       "resolved": "https://registry.npmjs.org/math-intrinsics/-/math-intrinsics-1.1.0.tgz",
@@ -6189,18 +8160,6 @@
       "license": "MIT",
       "engines": {
         "node": ">= 0.4"
-      }
-    },
-    "node_modules/md5-file": {
-      "version": "5.0.0",
-      "resolved": "https://registry.npmjs.org/md5-file/-/md5-file-5.0.0.tgz",
-      "integrity": "sha512-xbEFXCYVWrSx/gEKS1VPlg84h/4L20znVIulKw6kMfmBUAZNAnF00eczz9ICMl+/hjQGo5KSXRxbL/47X3rmMw==",
-      "license": "MIT",
-      "bin": {
-        "md5-file": "cli.js"
-      },
-      "engines": {
-        "node": ">=10.13.0"
       }
     },
     "node_modules/media-engine": {
@@ -6237,7 +8196,7 @@
       "version": "3.1.2",
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz",
       "integrity": "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==",
-      "devOptional": true,
+      "dev": true,
       "license": "ISC",
       "dependencies": {
         "brace-expansion": "^1.1.7"
@@ -6265,190 +8224,6 @@
       "engines": {
         "node": ">=16 || 14 >=14.17"
       }
-    },
-    "node_modules/minipass-collect": {
-      "version": "1.0.2",
-      "resolved": "https://registry.npmjs.org/minipass-collect/-/minipass-collect-1.0.2.tgz",
-      "integrity": "sha512-6T6lH0H8OG9kITm/Jm6tdooIbogG9e0tLgpY6mphXSm/A9u8Nq1ryBG+Qspiub9LjWlBPsPS3tWQ/Botq4FdxA==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.0.0"
-      },
-      "engines": {
-        "node": ">= 8"
-      }
-    },
-    "node_modules/minipass-collect/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/minipass-collect/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/minipass-fetch": {
-      "version": "2.1.2",
-      "resolved": "https://registry.npmjs.org/minipass-fetch/-/minipass-fetch-2.1.2.tgz",
-      "integrity": "sha512-LT49Zi2/WMROHYoqGgdlQIZh8mLPZmOrN2NdJjMXxYe4nkN6FUyuPuOAOedNJDrx0IRGg9+4guZewtp8hE6TxA==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.1.6",
-        "minipass-sized": "^1.0.3",
-        "minizlib": "^2.1.2"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      },
-      "optionalDependencies": {
-        "encoding": "^0.1.13"
-      }
-    },
-    "node_modules/minipass-fetch/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/minipass-fetch/node_modules/minizlib": {
-      "version": "2.1.2",
-      "resolved": "https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz",
-      "integrity": "sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.0.0",
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">= 8"
-      }
-    },
-    "node_modules/minipass-fetch/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/minipass-flush": {
-      "version": "1.0.5",
-      "resolved": "https://registry.npmjs.org/minipass-flush/-/minipass-flush-1.0.5.tgz",
-      "integrity": "sha512-JmQSYYpPUqX5Jyn1mXaRwOda1uQ8HP5KAT/oDSLCzt1BYRhQU0/hDtsB1ufZfEEzMZ9aAVmsBw8+FWsIXlClWw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.0.0"
-      },
-      "engines": {
-        "node": ">= 8"
-      }
-    },
-    "node_modules/minipass-flush/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/minipass-flush/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/minipass-pipeline": {
-      "version": "1.2.4",
-      "resolved": "https://registry.npmjs.org/minipass-pipeline/-/minipass-pipeline-1.2.4.tgz",
-      "integrity": "sha512-xuIq7cIOt09RPRJ19gdi4b+RiNvDFYe5JH+ggNvBqGqpQXcru3PcRmOZuHBKWK1Txf9+cQ+HMVN4d6z46LZP7A==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/minipass-pipeline/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/minipass-pipeline/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/minipass-sized": {
-      "version": "1.0.3",
-      "resolved": "https://registry.npmjs.org/minipass-sized/-/minipass-sized-1.0.3.tgz",
-      "integrity": "sha512-MbkQQ2CTiBMlA2Dm/5cY+9SWFEN8pzzOXi6rlM5Xxq0Yqbda5ZQy9sU75a673FE9ZK0Zsbr6Y5iP6u9nktfg2g==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/minipass-sized/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/minipass-sized/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
     },
     "node_modules/minizlib": {
       "version": "3.0.2",
@@ -6498,7 +8273,7 @@
       "version": "2.1.3",
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz",
       "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
-      "devOptional": true,
+      "dev": true,
       "license": "MIT"
     },
     "node_modules/nanoid": {
@@ -6541,16 +8316,6 @@
       "integrity": "sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==",
       "dev": true,
       "license": "MIT"
-    },
-    "node_modules/negotiator": {
-      "version": "0.6.4",
-      "resolved": "https://registry.npmjs.org/negotiator/-/negotiator-0.6.4.tgz",
-      "integrity": "sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">= 0.6"
-      }
     },
     "node_modules/next": {
       "version": "15.5.2",
@@ -6642,150 +8407,6 @@
         "node": "^10 || ^12 || >=14"
       }
     },
-    "node_modules/node-addon-api": {
-      "version": "6.1.0",
-      "resolved": "https://registry.npmjs.org/node-addon-api/-/node-addon-api-6.1.0.tgz",
-      "integrity": "sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==",
-      "license": "MIT"
-    },
-    "node_modules/node-gyp": {
-      "version": "9.4.1",
-      "resolved": "https://registry.npmjs.org/node-gyp/-/node-gyp-9.4.1.tgz",
-      "integrity": "sha512-OQkWKbjQKbGkMf/xqI1jjy3oCTgMKJac58G2+bjZb3fza6gW2YrCSdMQYaoTb70crvE//Gngr4f0AgVHmqHvBQ==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "env-paths": "^2.2.0",
-        "exponential-backoff": "^3.1.1",
-        "glob": "^7.1.4",
-        "graceful-fs": "^4.2.6",
-        "make-fetch-happen": "^10.0.3",
-        "nopt": "^6.0.0",
-        "npmlog": "^6.0.0",
-        "rimraf": "^3.0.2",
-        "semver": "^7.3.5",
-        "tar": "^6.1.2",
-        "which": "^2.0.2"
-      },
-      "bin": {
-        "node-gyp": "bin/node-gyp.js"
-      },
-      "engines": {
-        "node": "^12.13 || ^14.13 || >=16"
-      }
-    },
-    "node_modules/node-gyp-build": {
-      "version": "4.8.4",
-      "resolved": "https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-4.8.4.tgz",
-      "integrity": "sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==",
-      "license": "MIT",
-      "bin": {
-        "node-gyp-build": "bin.js",
-        "node-gyp-build-optional": "optional.js",
-        "node-gyp-build-test": "build-test.js"
-      }
-    },
-    "node_modules/node-gyp/node_modules/chownr": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/chownr/-/chownr-2.0.0.tgz",
-      "integrity": "sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==",
-      "license": "ISC",
-      "optional": true,
-      "engines": {
-        "node": ">=10"
-      }
-    },
-    "node_modules/node-gyp/node_modules/minipass": {
-      "version": "5.0.0",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz",
-      "integrity": "sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==",
-      "license": "ISC",
-      "optional": true,
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/node-gyp/node_modules/minizlib": {
-      "version": "2.1.2",
-      "resolved": "https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz",
-      "integrity": "sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.0.0",
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">= 8"
-      }
-    },
-    "node_modules/node-gyp/node_modules/minizlib/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/node-gyp/node_modules/mkdirp": {
-      "version": "1.0.4",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
-      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
-      "license": "MIT",
-      "optional": true,
-      "bin": {
-        "mkdirp": "bin/cmd.js"
-      },
-      "engines": {
-        "node": ">=10"
-      }
-    },
-    "node_modules/node-gyp/node_modules/tar": {
-      "version": "6.2.1",
-      "resolved": "https://registry.npmjs.org/tar/-/tar-6.2.1.tgz",
-      "integrity": "sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "chownr": "^2.0.0",
-        "fs-minipass": "^2.0.0",
-        "minipass": "^5.0.0",
-        "minizlib": "^2.1.1",
-        "mkdirp": "^1.0.3",
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=10"
-      }
-    },
-    "node_modules/node-gyp/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/nopt": {
-      "version": "6.0.0",
-      "resolved": "https://registry.npmjs.org/nopt/-/nopt-6.0.0.tgz",
-      "integrity": "sha512-ZwLpbTgdhuZUnZzjd7nb1ZV+4DoiC6/sfiVKok72ym/4Tlf+DFdlHYmT2JPmcNNWV6Pi3SDf1kT+A4r9RTuT9g==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "abbrev": "^1.0.0"
-      },
-      "bin": {
-        "nopt": "bin/nopt.js"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      }
-    },
     "node_modules/normalize-svg-path": {
       "version": "1.1.0",
       "resolved": "https://registry.npmjs.org/normalize-svg-path/-/normalize-svg-path-1.1.0.tgz",
@@ -6793,23 +8414,6 @@
       "license": "MIT",
       "dependencies": {
         "svg-arc-to-cubic-bezier": "^3.0.0"
-      }
-    },
-    "node_modules/npmlog": {
-      "version": "6.0.2",
-      "resolved": "https://registry.npmjs.org/npmlog/-/npmlog-6.0.2.tgz",
-      "integrity": "sha512-/vBvz5Jfr9dT/aFWd0FIRf+T/Q2WBsLENygUaFUqstqsycmZAP/t5BvFJTK0viFmSUxiUKTUplWy5vt+rvKIxg==",
-      "deprecated": "This package is no longer supported.",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "are-we-there-yet": "^3.0.0",
-        "console-control-strings": "^1.1.0",
-        "gauge": "^4.0.3",
-        "set-blocking": "^2.0.0"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
       }
     },
     "node_modules/object-assign": {
@@ -6934,16 +8538,6 @@
         "url": "https://github.com/sponsors/ljharb"
       }
     },
-    "node_modules/once": {
-      "version": "1.4.0",
-      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
-      "integrity": "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "wrappy": "1"
-      }
-    },
     "node_modules/optionator": {
       "version": "0.9.4",
       "resolved": "https://registry.npmjs.org/optionator/-/optionator-0.9.4.tgz",
@@ -7012,22 +8606,6 @@
         "url": "https://github.com/sponsors/sindresorhus"
       }
     },
-    "node_modules/p-map": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/p-map/-/p-map-4.0.0.tgz",
-      "integrity": "sha512-/bjOqmgETBYB5BoEeGVea8dmvHb2m9GLy1E9W43yeyfP6QQCZGFNa+XRceJEuDB6zqr+gKpIAmlLebMpykw/MQ==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "aggregate-error": "^3.0.0"
-      },
-      "engines": {
-        "node": ">=10"
-      },
-      "funding": {
-        "url": "https://github.com/sponsors/sindresorhus"
-      }
-    },
     "node_modules/pako": {
       "version": "1.0.11",
       "resolved": "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz",
@@ -7061,16 +8639,6 @@
       "license": "MIT",
       "engines": {
         "node": ">=8"
-      }
-    },
-    "node_modules/path-is-absolute": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
-      "integrity": "sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">=0.10.0"
       }
     },
     "node_modules/path-key": {
@@ -7162,27 +8730,6 @@
       "license": "MIT",
       "engines": {
         "node": ">= 0.8.0"
-      }
-    },
-    "node_modules/promise-inflight": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/promise-inflight/-/promise-inflight-1.0.1.tgz",
-      "integrity": "sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==",
-      "license": "ISC",
-      "optional": true
-    },
-    "node_modules/promise-retry": {
-      "version": "2.0.1",
-      "resolved": "https://registry.npmjs.org/promise-retry/-/promise-retry-2.0.1.tgz",
-      "integrity": "sha512-y+WKFlBR8BGXnsNlIHFGPZmyDf3DFMoLhaflAnyZgV6rG6xu+JwesTo2Q9R6XwYmtmwAFCkAk3e35jEdoeh/3g==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "err-code": "^2.0.2",
-        "retry": "^0.12.0"
-      },
-      "engines": {
-        "node": ">=10"
       }
     },
     "node_modules/prop-types": {
@@ -7341,21 +8888,6 @@
         }
       }
     },
-    "node_modules/readable-stream": {
-      "version": "3.6.2",
-      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz",
-      "integrity": "sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "inherits": "^2.0.3",
-        "string_decoder": "^1.1.1",
-        "util-deprecate": "^1.0.1"
-      },
-      "engines": {
-        "node": ">= 6"
-      }
-    },
     "node_modules/reflect.getprototypeof": {
       "version": "1.0.10",
       "resolved": "https://registry.npmjs.org/reflect.getprototypeof/-/reflect.getprototypeof-1.0.10.tgz",
@@ -7456,16 +8988,6 @@
       "integrity": "sha512-gSfoiOEA0VPE6Tukkrr7I0RBdE0s7H1eFCDBk05l1KIQT1UIKNc5JZy6jdyW6eYH3aR3g5b3PuL77rq0hvwtAw==",
       "license": "MIT"
     },
-    "node_modules/retry": {
-      "version": "0.12.0",
-      "resolved": "https://registry.npmjs.org/retry/-/retry-0.12.0.tgz",
-      "integrity": "sha512-9LkiTwjUh6rT555DtE9rTX+BKByPfrMzEAtnlEtdEwr3Nkffwiihqe2bWADg+OQRjt9gl6ICdmB/ZFDCGAtSow==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">= 4"
-      }
-    },
     "node_modules/reusify": {
       "version": "1.1.0",
       "resolved": "https://registry.npmjs.org/reusify/-/reusify-1.1.0.tgz",
@@ -7475,23 +8997,6 @@
       "engines": {
         "iojs": ">=1.0.0",
         "node": ">=0.10.0"
-      }
-    },
-    "node_modules/rimraf": {
-      "version": "3.0.2",
-      "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz",
-      "integrity": "sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==",
-      "deprecated": "Rimraf versions prior to v4 are no longer supported",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "glob": "^7.1.3"
-      },
-      "bin": {
-        "rimraf": "bin.js"
-      },
-      "funding": {
-        "url": "https://github.com/sponsors/isaacs"
       }
     },
     "node_modules/run-parallel": {
@@ -7593,13 +9098,6 @@
         "url": "https://github.com/sponsors/ljharb"
       }
     },
-    "node_modules/safer-buffer": {
-      "version": "2.1.2",
-      "resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
-      "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==",
-      "license": "MIT",
-      "optional": true
-    },
     "node_modules/scheduler": {
       "version": "0.26.0",
       "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.26.0.tgz",
@@ -7618,13 +9116,6 @@
       "engines": {
         "node": ">=10"
       }
-    },
-    "node_modules/set-blocking": {
-      "version": "2.0.0",
-      "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
-      "integrity": "sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==",
-      "license": "ISC",
-      "optional": true
     },
     "node_modules/set-function-length": {
       "version": "1.2.2",
@@ -7817,13 +9308,6 @@
         "url": "https://github.com/sponsors/ljharb"
       }
     },
-    "node_modules/signal-exit": {
-      "version": "3.0.7",
-      "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz",
-      "integrity": "sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==",
-      "license": "ISC",
-      "optional": true
-    },
     "node_modules/simple-swizzle": {
       "version": "0.2.2",
       "resolved": "https://registry.npmjs.org/simple-swizzle/-/simple-swizzle-0.2.2.tgz",
@@ -7831,47 +9315,6 @@
       "license": "MIT",
       "dependencies": {
         "is-arrayish": "^0.3.1"
-      }
-    },
-    "node_modules/smart-buffer": {
-      "version": "4.2.0",
-      "resolved": "https://registry.npmjs.org/smart-buffer/-/smart-buffer-4.2.0.tgz",
-      "integrity": "sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==",
-      "license": "MIT",
-      "optional": true,
-      "engines": {
-        "node": ">= 6.0.0",
-        "npm": ">= 3.0.0"
-      }
-    },
-    "node_modules/socks": {
-      "version": "2.8.7",
-      "resolved": "https://registry.npmjs.org/socks/-/socks-2.8.7.tgz",
-      "integrity": "sha512-HLpt+uLy/pxB+bum/9DzAgiKS8CX1EvbWxI4zlmgGCExImLdiad2iCwXT5Z4c9c3Eq8rP2318mPW2c+QbtjK8A==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "ip-address": "^10.0.1",
-        "smart-buffer": "^4.2.0"
-      },
-      "engines": {
-        "node": ">= 10.0.0",
-        "npm": ">= 3.0.0"
-      }
-    },
-    "node_modules/socks-proxy-agent": {
-      "version": "7.0.0",
-      "resolved": "https://registry.npmjs.org/socks-proxy-agent/-/socks-proxy-agent-7.0.0.tgz",
-      "integrity": "sha512-Fgl0YPZ902wEsAyiQ+idGd1A7rSFx/ayC1CQVMw5P+EQx2V0SgpGtf6OKFhVjPflPUl9YMmEOnmfjCdMUsygww==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "agent-base": "^6.0.2",
-        "debug": "^4.3.3",
-        "socks": "^2.6.2"
-      },
-      "engines": {
-        "node": ">= 10"
       }
     },
     "node_modules/sonner": {
@@ -7892,39 +9335,6 @@
       "engines": {
         "node": ">=0.10.0"
       }
-    },
-    "node_modules/ssri": {
-      "version": "9.0.1",
-      "resolved": "https://registry.npmjs.org/ssri/-/ssri-9.0.1.tgz",
-      "integrity": "sha512-o57Wcn66jMQvfHG1FlYbWeZWW/dHZhJXjpIcTfXldXEk5nz5lStPo3mK0OJQfGR3RbZUlbISexbljkJzuEj/8Q==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "minipass": "^3.1.1"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      }
-    },
-    "node_modules/ssri/node_modules/minipass": {
-      "version": "3.3.6",
-      "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.3.6.tgz",
-      "integrity": "sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "yallist": "^4.0.0"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/ssri/node_modules/yallist": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
-      "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
-      "license": "ISC",
-      "optional": true
     },
     "node_modules/stable-hash": {
       "version": "0.0.5",
@@ -7955,28 +9365,6 @@
       "dependencies": {
         "safe-buffer": "~5.2.0"
       }
-    },
-    "node_modules/string-width": {
-      "version": "4.2.3",
-      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz",
-      "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "emoji-regex": "^8.0.0",
-        "is-fullwidth-code-point": "^3.0.0",
-        "strip-ansi": "^6.0.1"
-      },
-      "engines": {
-        "node": ">=8"
-      }
-    },
-    "node_modules/string-width/node_modules/emoji-regex": {
-      "version": "8.0.0",
-      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
-      "integrity": "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==",
-      "license": "MIT",
-      "optional": true
     },
     "node_modules/string.prototype.includes": {
       "version": "2.0.1",
@@ -8089,19 +9477,6 @@
       },
       "funding": {
         "url": "https://github.com/sponsors/ljharb"
-      }
-    },
-    "node_modules/strip-ansi": {
-      "version": "6.0.1",
-      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz",
-      "integrity": "sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==",
-      "license": "MIT",
-      "optional": true,
-      "dependencies": {
-        "ansi-regex": "^5.0.1"
-      },
-      "engines": {
-        "node": ">=8"
       }
     },
     "node_modules/strip-bom": {
@@ -8505,32 +9880,6 @@
       "integrity": "sha512-NUcwaKxUxWrZLpDG+z/xZaCgQITkA/Dv4V/T6bw7VON6l1Xz/VnrBqrYjZQ12TamKHzITTfOEIYUj48y2KXImA==",
       "license": "MIT"
     },
-    "node_modules/unique-filename": {
-      "version": "2.0.1",
-      "resolved": "https://registry.npmjs.org/unique-filename/-/unique-filename-2.0.1.tgz",
-      "integrity": "sha512-ODWHtkkdx3IAR+veKxFV+VBkUMcN+FaqzUUd7IZzt+0zhDZFPFxhlqwPF3YQvMHx1TD0tdgYl+kuPnJ8E6ql7A==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "unique-slug": "^3.0.0"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      }
-    },
-    "node_modules/unique-slug": {
-      "version": "3.0.0",
-      "resolved": "https://registry.npmjs.org/unique-slug/-/unique-slug-3.0.0.tgz",
-      "integrity": "sha512-8EyMynh679x/0gqE9fT9oilG+qEt+ibFyqjuVTsZn1+CMxH+XLlpvr2UZx4nVcCwTpx81nICr2JQFkM+HPLq4w==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "imurmurhash": "^0.1.4"
-      },
-      "engines": {
-        "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
-      }
-    },
     "node_modules/unrs-resolver": {
       "version": "1.11.1",
       "resolved": "https://registry.npmjs.org/unrs-resolver/-/unrs-resolver-1.11.1.tgz",
@@ -8643,7 +9992,7 @@
       "version": "2.0.2",
       "resolved": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
       "integrity": "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==",
-      "devOptional": true,
+      "dev": true,
       "license": "ISC",
       "dependencies": {
         "isexe": "^2.0.0"
@@ -8744,16 +10093,6 @@
         "url": "https://github.com/sponsors/ljharb"
       }
     },
-    "node_modules/wide-align": {
-      "version": "1.1.5",
-      "resolved": "https://registry.npmjs.org/wide-align/-/wide-align-1.1.5.tgz",
-      "integrity": "sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==",
-      "license": "ISC",
-      "optional": true,
-      "dependencies": {
-        "string-width": "^1.0.2 || 2 || 3 || 4"
-      }
-    },
     "node_modules/word-wrap": {
       "version": "1.2.5",
       "resolved": "https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.5.tgz",
@@ -8763,13 +10102,6 @@
       "engines": {
         "node": ">=0.10.0"
       }
-    },
-    "node_modules/wrappy": {
-      "version": "1.0.2",
-      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
-      "integrity": "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==",
-      "license": "ISC",
-      "optional": true
     },
     "node_modules/yallist": {
       "version": "5.0.0",
@@ -8802,3 +10134,432 @@
     }
   }
 }
+
+```
+
+## 📄 package.json
+
+```json
+{
+  "name": "nextfolio_pro",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@react-pdf/renderer": "^4.3.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.542.0",
+    "next": "15.5.2",
+    "next-themes": "^0.4.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.7",
+    "typescript": "^5"
+  }
+}
+
+```
+
+## 📄 README.md
+
+```md
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+```
+
+## 📄 tailwind.config.ts
+
+```ts
+
+import animate from "tailwindcss-animate";
+
+import type { Config } from "tailwindcss";
+
+export default {
+	darkMode: "class",
+	content: [
+		"./pages/**/*.{ts,tsx}",
+		"./components/**/*.{ts,tsx}",
+		"./app/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}",
+	],
+	prefix: "",
+	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px'
+			}
+		},
+		extend: {
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				'serif': ['Playfair Display', 'Georgia', 'serif'],
+			},
+			colors: {
+				border: 'hsl(var(--border))',
+				input: 'hsl(var(--input))',
+				ring: 'hsl(var(--ring))',
+				background: 'hsl(var(--background))',
+				foreground: 'hsl(var(--foreground))',
+				primary: {
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
+				},
+				secondary: {
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
+				},
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))'
+				},
+				muted: {
+					DEFAULT: 'hsl(var(--muted))',
+					foreground: 'hsl(var(--muted-foreground))'
+				},
+				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
+				},
+				card: {
+					DEFAULT: 'hsl(var(--card))',
+					foreground: 'hsl(var(--card-foreground))'
+				},
+				sidebar: {
+					DEFAULT: 'hsl(var(--sidebar-background))',
+					foreground: 'hsl(var(--sidebar-foreground))',
+					primary: 'hsl(var(--sidebar-primary))',
+					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+					accent: 'hsl(var(--sidebar-accent))',
+					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+					border: 'hsl(var(--sidebar-border))',
+					ring: 'hsl(var(--sidebar-ring))'
+				}
+			},
+			borderRadius: {
+				lg: 'var(--radius)',
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
+			},
+			keyframes: {
+				'accordion-down': {
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
+				},
+				'accordion-up': {
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
+				}
+			},
+			animation: {
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out'
+			}
+		}
+	},
+	plugins: [animate],
+} satisfies Config;
+
+```
+
+## 📄 tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+
+```
+
+## 📄 types\site.ts
+
+```ts
+export interface SiteConfig {
+  name: string;
+  title: string;
+  description: string;
+  email: string;
+  phone: string;
+  location: string;
+  profileImage: string;
+  hero: {
+    variant: 'minimal' | 'with-image';
+    title: string;
+    subtitle: string;
+    description: string;
+    ctaText: string;
+    ctaUrl?: string;
+    heroImage?: string;
+  };
+  socialLinks: {
+    linkedin: string;
+    github: string;
+    portfolioWeb: string;
+    portfolioDesign: string;
+  };
+  experiences: Array<{
+    company: string;
+    position: string;
+    location: string;
+    period: string;
+    achievements: string[];
+  }>;
+  projects: Array<{
+    title: string;
+    description: string;
+    type: 'Projet de soutenance' | 'Projet en cours' | 'Autre';
+    technologies: string[];
+    status: 'Terminé' | 'En développement';
+    link: string;
+    github?: string;
+    features?: string[];
+    year?: string;
+  }>;
+  skills: {
+    technical: string[];
+    soft: string[];
+  };
+  about: {
+    title: string;
+    description: string;
+  };
+  analytics?: 
+  | { enabled: true; provider: 'plausible'; plausibleDomain: string }
+  | { enabled: true; provider: 'ga4'; ga4MeasurementId: string }
+  | { enabled: false }
+
+}
+
+export const siteConfig: SiteConfig = {
+  name: "Manassé AKPOVI",
+  title: "Manassé AKPOVI - Développeur Frontend React.js & TypeScript",
+  description: "Portfolio professionnel de Manassé AKPOVI, développeur frontend spécialisé en React.js et TypeScript. Création d'interfaces modernes et performantes.",
+  email: "manews193@gmail.com",
+  phone: "+229 01 91 40 49 10",
+  location: "Cotonou, Bénin",
+  profileImage: "/photoMoi.png",
+  
+  hero: {
+    variant: 'with-image', // 'minimal' ou 'with-image'
+    title: "Manassé AKPOVI",
+    subtitle: "Développeur Frontend React.js & TypeScript",
+    description: "Passionné par la création d'interfaces utilisateur modernes et performantes. Je transforme vos idées en expériences web exceptionnelles.",
+    ctaText: "Voir mes projets",
+    ctaUrl: "#projects"
+  },
+
+  socialLinks: {
+    linkedin: "https://www.linkedin.com/in/manasse-akpovi",
+    github: "https://github.com/AkmaDev",
+    portfolioWeb: "https://github.com/AkmaDev",
+    portfolioDesign: "/portfoliodesign"
+  },
+
+  experiences: [
+    {
+      company: "NerdX Digital",
+      position: "ReactJS Developer Intern",
+      location: "Bénin",
+      period: "03/2024 – 09/2024",
+      achievements: [
+        "Développement d'interfaces frontend responsives à partir de designs UI/UX",
+        "Conversion de maquettes Figma en code React.js propre et maintenable",
+        "Utilisation de Tailwind CSS pour des designs modernes",
+      ],
+    },
+    {
+      company: "JILMONDE CONSULTING",
+      position: "Stagiaire Développeur Java",
+      location: "Bénin",
+      period: "04/2023 – 06/2023",
+      achievements: [
+        "Développement et maintenance de tests unitaires avec JUnit et JaCoCo",
+        "Application des principes TDD pour renforcer la robustesse du code",
+      ],
+    },
+    {
+      company: "AKS PICTURES",
+      position: "Stagiaire Développeur Python",
+      location: "Bénin",
+      period: "07/2022 – 08/2022",
+      achievements: [
+        "Développement et optimisation de scripts de narration interactive (Python/Ren'Py)",
+        "Optimisation des assets du jeu avec Photoshop",
+      ],
+    },
+  ],
+
+  projects: [
+    {
+      title: "Plateforme de promotion des producteurs locaux",
+      description: "Plateforme web pour valoriser les producteurs locaux, faciliter la vente et la promotion de leurs produits. Projet de soutenance développé avec React.js et une base de données moderne.",
+      type: "Projet de soutenance",
+      technologies: ["React.js", "TypeScript", "Tailwind CSS", "Appwrite"],
+      status: "Terminé",
+      link: "https://sinfi-project-soutenance-2024.vercel.app/",
+      github: "https://github.com/AkmaDev/sinfi-project",
+      year: "2024",
+      features: [
+        "Interface utilisateur moderne et responsive",
+        "Système d'authentification sécurisé",
+        "Gestion complète des produits",
+        "Tableau de bord producteur",
+        "Recherche et filtrage avancés",
+        "Optimisation SEO"
+      ]
+    },
+    {
+      title: "Flipbook / Bible pour enfants en fon",
+      description: "Outil interactif et visuel pour la lecture biblique des enfants, favorisant la méditation et la compréhension. Interface ludique et éducative adaptée aux jeunes utilisateurs.",
+      type: "Projet en cours",
+      technologies: ["React.js", "Animation", "Design UX/UI"],
+      status: "En développement",
+      link: "https://github.com/AkmaDev/BibleFon",
+      github: "https://github.com/AkmaDev/BibleFon",
+      year: "2024",
+      features: [
+        "Interface ludique adaptée aux enfants",
+        "Animations fluides et interactives", 
+        "Navigation intuitive",
+        "Contenu multimédia intégré",
+        "Design responsive",
+        "Accessibilité optimisée"
+      ]
+    },
+  ],
+
+  skills: {
+    technical: [
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "Appwrite",
+      "CSS",
+      "HTML",
+      "Python",
+      "Ren'Py",
+      "Photoshop",
+      "Frontend Responsive",
+    ],
+    soft: [
+      "Communication excellente",
+      "Autonomie",
+      "Esprit d'équipe",
+      "Créativité",
+      "Sens du design",
+      "Adaptabilité",
+      "Apprentissage rapide",
+    ]
+  },
+
+  about: {
+    title: "Profil Professionnel",
+    description: "Développeur frontend passionné, expérimenté en React.js et TypeScript, motivé à créer des solutions innovantes et performantes. Mon objectif est de mettre en avant mes compétences techniques et projets phares de manière professionnelle et interactive, en contribuant à des projets web modernes qui font la différence."
+  },
+
+  analytics: {
+    enabled: true, // Change to true to enable analytics
+    provider: 'plausible', // 'plausible' or 'ga4'
+    plausibleDomain: 'your-domain.com', // Replace with your domain
+    // ga4MeasurementId: 'G-XXXXXXXXXX', // Uncomment and replace with your GA4 ID
+  }
+};
+```
