@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 CV en ligne – Portfolio Next.js SEO
 
-## Getting Started
+Un **CV en ligne moderne et optimisé pour Google** construit avec **Next.js, TypeScript et Tailwind CSS**.  
+Ce projet va au-delà d’un simple portfolio : il combine **visibilité, accessibilité et interactivité** pour offrir une vraie valeur aux développeurs, freelances, étudiants et recruteurs.
 
-First, run the development server:
+---
 
+## 🚀 Ce que ce projet apporte
+
+- 🔎 **Un CV mieux indexé par Google** :  
+  grâce aux **balises SEO** et aux **données structurées (JSON-LD Schema.org)**, vos informations (nom, poste, compétences, localisation) sont compréhensibles par les moteurs de recherche.  
+  → Résultat : en tapant votre nom, Google sait **qui vous êtes et ce que vous faites**.  
+
+- 📑 **Téléchargement direct du CV en PDF** :  
+  pas besoin d’envoyer des pièces jointes à jour → le recruteur peut télécharger votre CV depuis votre site en **1 clic**.  
+
+- ♿ **Accessibilité intégrée** :  
+  le site s’adapte aux préférences des utilisateurs (réduction des animations, contraste élevé).  
+  → Utilisable par tous, sans compromis.  
+
+- 📊 **Mesure d’impact** :  
+  via l’intégration d’analytics, vous savez combien de recruteurs ou visiteurs consultent votre profil, quels projets intéressent le plus, et combien téléchargent votre CV.  
+
+- ✨ **Extensible et open-source** :  
+  ce n’est pas un projet figé. Chacun peut le forker, l’adapter à ses besoins et l’améliorer.  
+
+---
+
+## 🛠️ Stack technique
+
+- **Framework** : [Next.js 14](https://nextjs.org/)  
+- **Langage** : TypeScript  
+- **UI** : Tailwind CSS, shadcn/ui, Framer Motion  
+- **SEO** : Head meta tags + JSON-LD Schema.org (type `Person`)  
+- **PDF** : @react-pdf/renderer (génération de CV téléchargeable)  
+- **Analytics** : Plausible / Google Analytics 4  
+- **Accessibilité** : gestion `prefers-reduced-motion` & `prefers-contrast`  
+
+---
+
+## 📂 Structure du projet
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+.
+├── app/               # Layout et pages principales
+├── components/        # Composants réutilisables (UI, Portfolio, PDF, Accessibilité)
+├── types/             # Config & typages du site
+├── public/            # Images et assets
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚡ Installation & Démarrage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# 1. Cloner le repo
+git clone https://github.com/<AkmaDev>/nextjs-portfolio-template.git
+```
+# 2. Installer les dépendances
+```bash
+cd nextjs-portfolio-template
+npm install
+```
 
-## Learn More
+# 3. Lancer en local
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+➡️ Le site sera dispo sur http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📄 Licence
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Projet open-source sous licence MIT.
+Vous pouvez l’utiliser, le modifier et le partager librement.
 
-## Deploy on Vercel
+👤 Auteur
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Manassé AKPOVI
+📌 [LinkedIn](www.linkedin.com/in/manasse-akpovi) 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+💻 [monsitepersonnel](https://www.manasseakpovi.com/) 
+
