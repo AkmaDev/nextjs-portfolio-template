@@ -124,41 +124,46 @@ export const siteConfig: SiteConfig = {
     },
   ],
 
-  projects: [
-    {
-      title: "Juriste Vert – Automatisation prise de rendez-vous juridiques",
-      description:
-        "Automatisation complète du parcours client (Supabase, Resend, Google Calendar API, IA) permettant une prise de rendez-vous fluide et sans intervention humaine.",
-      type: "Autre",
-      technologies: ["Supabase", "Resend", "Google Calendar API", "IA"],
-      status: "Terminé",
-      link: "https://juristevert.com/",
-      features: ["Automatisation de bout en bout", "Intégration IA pour optimiser le processus"],
-      year: "2024",
-    },
-    {
-      title: "CV interactif & SEO",
-      description:
-        "Site personnel combinant CV, portfolio et blog (Next.js + Schema.org) optimisé pour le SEO et l’accessibilité (a11y).",
-      type: "Autre",
-      technologies: ["Next.js", "Schema.org", "TailwindCSS"],
-      status: "Terminé",
-      link: "https://nextjs-portfolio-template-swart.vercel.app/",
-      year: "2024",
-      features: ["Structure SEO avancée", "Accessibilité optimisée", "Design responsive"],
-    },
-    {
-      title: "Visualiseur PDF – Flipbook animé",
-      description:
-        "Transformation d’un PDF statique en expérience interactive (Next.js, TailwindCSS, iLovePDF API, JSZip, IA) pour augmenter l’engagement utilisateur.",
-      type: "Autre",
-      technologies: ["Next.js", "TailwindCSS", "iLovePDF API", "JSZip", "IA"],
-      status: "Terminé",
-      link: "https://premiumflipbook.vercel.app/",
-      year: "2024",
-      features: ["Flipbook interactif", "Animations fluides", "Interface intuitive"],
-    },
-  ],
+projects: [
+  {
+    title: "Juriste Vert – Automatisation prise de rendez-vous juridiques",
+    description:
+      "Automatisation complète du parcours client (Supabase, Resend, Google Calendar API, IA) permettant une prise de rendez-vous fluide et sans intervention humaine.",
+    type: "Autre",
+    technologies: ["Supabase", "Resend", "Google Calendar API", "IA"],
+    status: "Terminé",
+    link: "https://juristevert.com/",   // ✅ lien live
+    github: undefined,                  // ou à remplir si dispo
+    features: [
+      "Automatisation de bout en bout",
+      "Intégration IA pour optimiser le processus",
+    ],
+    year: "2024",
+  },
+  {
+    title: "CV interactif & SEO",
+    description:
+      "Site personnel combinant CV, portfolio et blog (Next.js + Schema.org) optimisé pour le SEO et l’accessibilité (a11y).",
+    type: "Autre",
+    technologies: ["Next.js", "Schema.org", "TailwindCSS"],
+    status: "Terminé",
+    link: "https://nextjs-portfolio-template-swart.vercel.app/", // ✅ lien live
+    github: "https://github.com/AkmaDev/nextjs-portfolio-template", // ✅ code
+    year: "2024",
+  },
+  {
+    title: "Visualiseur PDF – Flipbook animé",
+    description:
+      "Transformation d’un PDF statique en expérience interactive (Next.js, TailwindCSS, iLovePDF API, JSZip, IA) pour augmenter l’engagement utilisateur.",
+    type: "Autre",
+    technologies: ["Next.js", "TailwindCSS", "iLovePDF API", "JSZip", "IA"],
+    status: "Terminé",
+    link: "https://premiumflipbook.vercel.app/", // ✅ lien live
+    github: "https://github.com/AkmaDev/premiumflipbook", // ✅ code
+    year: "2024",
+  },
+],
+
 
   // <-- NOUVELLE SECTION ÉDUCATION
   education: [

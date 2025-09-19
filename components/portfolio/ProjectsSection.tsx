@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-import Link from "next/link";
+// import Link from "next/link";
 import { siteConfig } from "@/types/site";
 
 export function ProjectsSection() {
@@ -31,10 +31,10 @@ export function ProjectsSection() {
 
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {siteConfig.projects.map((project, index) => {
-            const projectSlug = project.title
-              .toLowerCase()
-              .replace(/[^a-z0-9]+/g, "-")
-              .replace(/(^-|-$)/g, "");
+            // const projectSlug = project.title
+            //   .toLowerCase()
+            //   .replace(/[^a-z0-9]+/g, "-")
+            //   .replace(/(^-|-$)/g, "");
 
             return (
               <motion.article
@@ -89,22 +89,26 @@ export function ProjectsSection() {
                 </div>
 
                 <footer className="flex gap-3">
-                  {/* Lien interne vers projet */}
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 hover:bg-primary/10 hover:border-primary/50 transition-all"
-                    asChild
-                  >
-                    <Link
-                      href={`/projects/${projectSlug}`}
-                      className="text-muted-foreground hover:text-primary flex items-center"
-                      aria-label={`En savoir plus sur ${project.title}`}
+                  {/* Lien externe vers site live */}
+                  {project.link && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="flex-1 hover:bg-primary/10 hover:border-primary/50 transition-all"
+                      asChild
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      En savoir plus
-                    </Link>
-                  </Button>
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Voir le projet ${project.title} en ligne (ouvre dans un nouvel onglet)`}
+                        className="flex items-center"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live
+                      </a>
+                    </Button>
+                  )}
 
                   {/* Lien externe vers GitHub */}
                   {project.github && (
