@@ -1,3 +1,4 @@
+// /types/site.ts
 export interface SiteConfig {
   name: string;
   title: string;
@@ -39,6 +40,14 @@ export interface SiteConfig {
     features?: string[];
     year?: string;
   }>;
+  // <-- NOUVEAU : Éducation
+  education: Array<{
+    degree: string;
+    institution: string;
+    location?: string;
+    period: string;
+    description?: string[]; // points clés (optionnel)
+  }>;
   skills: {
     technical: string[];
     soft: string[];
@@ -47,36 +56,38 @@ export interface SiteConfig {
     title: string;
     description: string;
   };
-  analytics?: 
-  | { enabled: true; provider: 'plausible'; plausibleDomain: string }
-  | { enabled: true; provider: 'ga4'; ga4MeasurementId: string }
-  | { enabled: false }
-
+  analytics?:
+    | { enabled: true; provider: 'plausible'; plausibleDomain: string }
+    | { enabled: true; provider: 'ga4'; ga4MeasurementId: string }
+    | { enabled: false };
 }
 
+// -------- siteConfig (extrait complet ci-dessous) --------
 export const siteConfig: SiteConfig = {
   name: "Manassé AKPOVI",
-  title: "Manassé AKPOVI - Développeur Frontend React.js & TypeScript",
-  description: "Portfolio professionnel de Manassé AKPOVI, développeur frontend spécialisé en React.js et TypeScript. Création d'interfaces modernes et performantes.",
+  title: "Manassé AKPOVI – Alternance Product Builder / Product Management",
+  description:
+    "Étudiant en Ingénierie Web à l’ESGI, passionné par le Product Building : transformer des idées en produits fonctionnels à forte valeur utilisateur. Expérimenté en développement web, prototypage rapide, intégration API/IA et gestion de MVP orientée business impact.",
   email: "manews193@gmail.com",
-  phone: "+229 01 91 40 49 10",
-  location: "Cotonou, Bénin",
+  phone: "+33 7 43 68 02 30",
+  location: "Paris, France",
   profileImage: "/photoMoi.png",
-  
+
   hero: {
-    variant: 'with-image', // 'minimal' ou 'with-image'
+    variant: "with-image",
     title: "Manassé AKPOVI",
-    subtitle: "Développeur Frontend React.js & TypeScript",
-    description: "Passionné par la création d'interfaces utilisateur modernes et performantes. Je transforme vos idées en expériences web exceptionnelles.",
-    ctaText: "Voir mes projets",
-    ctaUrl: "#projects"
+    subtitle: "Alternance Product Builder / Product Management",
+    description:
+      "Étudiant en Ingénierie Web (ESGI) prêt à rejoindre une équipe ambitieuse pour concevoir, tester et déployer des produits digitaux. Passionné par la création de MVP, l'UX et la croissance produit.",
+    ctaText: "Découvrir mes projets",
+    ctaUrl: "#projects",
   },
 
   socialLinks: {
     linkedin: "https://www.linkedin.com/in/manasse-akpovi",
     github: "https://github.com/AkmaDev",
     portfolioWeb: "https://github.com/AkmaDev",
-    portfolioDesign: "/portfoliodesign"
+    portfolioDesign: "/portfoliodesign",
   },
 
   experiences: [
@@ -86,106 +97,134 @@ export const siteConfig: SiteConfig = {
       location: "Bénin",
       period: "03/2024 – 09/2024",
       achievements: [
-        "Développement d'interfaces frontend responsives à partir de designs UI/UX",
-        "Conversion de maquettes Figma en code React.js propre et maintenable",
-        "Utilisation de Tailwind CSS pour des designs modernes",
+        "Déploiement d’interfaces web responsives à partir de maquettes Figma, réduisant de 20% le temps de mise en production.",
+        "Orchestration du cycle produit de l’idéation au code (React + Tailwind) pour améliorer la cohérence UX/UI.",
+        "Collaboration étroite avec designers et chefs de projet pour garantir l’alignement produit et favoriser l’adoption utilisateur.",
       ],
     },
     {
-      company: "JILMONDE CONSULTING",
+      company: "JILMONDE Consulting",
       position: "Stagiaire Développeur Java",
       location: "Bénin",
       period: "04/2023 – 06/2023",
       achievements: [
-        "Développement et maintenance de tests unitaires avec JUnit et JaCoCo",
-        "Application des principes TDD pour renforcer la robustesse du code",
+        "Implémentation de tests unitaires (JUnit, JaCoCo) renforçant la robustesse et la qualité du code.",
+        "Contribution à la mise en place de la validation continue, accélérant le cycle produit.",
       ],
     },
     {
-      company: "AKS PICTURES",
+      company: "AKS Pictures",
       position: "Stagiaire Développeur Python",
       location: "Bénin",
       period: "07/2022 – 08/2022",
       achievements: [
-        "Développement et optimisation de scripts de narration interactive (Python/Ren'Py)",
-        "Optimisation des assets du jeu avec Photoshop",
+        "Développement de scripts interactifs pour un jeu narratif (Ren’Py), améliorant l’engagement utilisateur.",
+        "Optimisation des assets graphiques via Photoshop, réduisant la taille moyenne des fichiers de 30%.",
       ],
     },
   ],
 
   projects: [
     {
-      title: "Plateforme de promotion des producteurs locaux",
-      description: "Plateforme web pour valoriser les producteurs locaux, faciliter la vente et la promotion de leurs produits. Projet de soutenance développé avec React.js et une base de données moderne.",
-      type: "Projet de soutenance",
-      technologies: ["React.js", "TypeScript", "Tailwind CSS", "Appwrite"],
+      title: "Juriste Vert – Automatisation prise de rendez-vous juridiques",
+      description:
+        "Automatisation complète du parcours client (Supabase, Resend, Google Calendar API, IA) permettant une prise de rendez-vous fluide et sans intervention humaine.",
+      type: "Autre",
+      technologies: ["Supabase", "Resend", "Google Calendar API", "IA"],
       status: "Terminé",
-      link: "https://sinfi-project-soutenance-2024.vercel.app/",
-      github: "https://github.com/AkmaDev/sinfi-project",
+      link: "https://juristevert.com/",
+      features: ["Automatisation de bout en bout", "Intégration IA pour optimiser le processus"],
       year: "2024",
-      features: [
-        "Interface utilisateur moderne et responsive",
-        "Système d'authentification sécurisé",
-        "Gestion complète des produits",
-        "Tableau de bord producteur",
-        "Recherche et filtrage avancés",
-        "Optimisation SEO"
-      ]
     },
     {
-      title: "Flipbook / Bible pour enfants en fon",
-      description: "Outil interactif et visuel pour la lecture biblique des enfants, favorisant la méditation et la compréhension. Interface ludique et éducative adaptée aux jeunes utilisateurs.",
-      type: "Projet en cours",
-      technologies: ["React.js", "Animation", "Design UX/UI"],
-      status: "En développement",
-      link: "https://github.com/AkmaDev/BibleFon",
-      github: "https://github.com/AkmaDev/BibleFon",
+      title: "CV interactif & SEO",
+      description:
+        "Site personnel combinant CV, portfolio et blog (Next.js + Schema.org) optimisé pour le SEO et l’accessibilité (a11y).",
+      type: "Autre",
+      technologies: ["Next.js", "Schema.org", "TailwindCSS"],
+      status: "Terminé",
+      link: "https://nextjs-portfolio-template-swart.vercel.app/",
       year: "2024",
-      features: [
-        "Interface ludique adaptée aux enfants",
-        "Animations fluides et interactives", 
-        "Navigation intuitive",
-        "Contenu multimédia intégré",
-        "Design responsive",
-        "Accessibilité optimisée"
-      ]
+      features: ["Structure SEO avancée", "Accessibilité optimisée", "Design responsive"],
+    },
+    {
+      title: "Visualiseur PDF – Flipbook animé",
+      description:
+        "Transformation d’un PDF statique en expérience interactive (Next.js, TailwindCSS, iLovePDF API, JSZip, IA) pour augmenter l’engagement utilisateur.",
+      type: "Autre",
+      technologies: ["Next.js", "TailwindCSS", "iLovePDF API", "JSZip", "IA"],
+      status: "Terminé",
+      link: "https://premiumflipbook.vercel.app/",
+      year: "2024",
+      features: ["Flipbook interactif", "Animations fluides", "Interface intuitive"],
+    },
+  ],
+
+  // <-- NOUVELLE SECTION ÉDUCATION
+  education: [
+    {
+      degree: "Bachelor Ingénierie Web",
+      institution: "ESGI – École Supérieure de Génie Informatique",
+      location: "Paris, France",
+      period: "En cours",
+      description: [
+        "Programme orienté développement web, architecture applicative et UX.",
+        "Projets pratiques : CV interactif, flipbook PDF, intégration d’APIs et prototypes produits.",
+      ],
+    },
+    {
+      degree: "Formation en Informatique",
+      institution: "IFRI – Institut de Formation et de Recherche en Informatique",
+      location: "Bénin",
+      period: "2020 – 2024",
+      description: [
+        "Fondamentaux du développement (Python, Java), bases de données et méthodologies projet.",
+        "Travaux notables : scripts interactifs Ren'Py et optimisation d’assets graphiques.",
+      ],
     },
   ],
 
   skills: {
     technical: [
-      "React.js",
+      "Product Discovery",
+      "MVP",
+      "Prototypage rapide",
+      "Wireframing",
+      "User Research",
+      "React",
+      "Next.js",
       "TypeScript",
-      "JavaScript",
-      "Tailwind CSS",
+      "TailwindCSS",
+      "Supabase",
       "Appwrite",
-      "CSS",
-      "HTML",
       "Python",
-      "Ren'Py",
+      "Java",
+      "APIs",
+      "Automatisation",
+      "No-code tools",
+      "IA générative",
       "Photoshop",
-      "Frontend Responsive",
+      "Figma",
     ],
     soft: [
-      "Communication excellente",
-      "Autonomie",
-      "Esprit d'équipe",
+      "Collaboration cross-fonctionnelle",
+      "Communication claire",
       "Créativité",
-      "Sens du design",
-      "Adaptabilité",
       "Apprentissage rapide",
-    ]
+      "Sens business",
+      "Travail en équipe internationale",
+    ],
   },
 
   about: {
     title: "Profil Professionnel",
-    description: "Développeur frontend passionné, expérimenté en React.js et TypeScript, motivé à créer des solutions innovantes et performantes. Mon objectif est de mettre en avant mes compétences techniques et projets phares de manière professionnelle et interactive, en contribuant à des projets web modernes qui font la différence."
+    description:
+      "Étudiant en Ingénierie Web à l’ESGI, passionné par le Product Building : transformer des idées en produits fonctionnels et à forte valeur utilisateur. Objectif : rejoindre une équipe ambitieuse pour concevoir, tester et déployer des produits digitaux tout en consolidant mes compétences en Product Management, UX et Growth.",
   },
 
   analytics: {
-    enabled: true, // Change to true to enable analytics
-    provider: 'plausible', // 'plausible' or 'ga4'
-    plausibleDomain: 'your-domain.com', // Replace with your domain
-    // ga4MeasurementId: 'G-XXXXXXXXXX', // Uncomment and replace with your GA4 ID
-  }
+    enabled: true,
+    provider: "plausible",
+    plausibleDomain: "your-domain.com",
+  },
 };

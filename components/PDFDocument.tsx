@@ -6,11 +6,12 @@ import {
   View,
   StyleSheet,
   Font,
+  Link,
 } from "@react-pdf/renderer";
 import { siteConfig } from "@/types/site";
 
+// Font config
 Font.registerHyphenationCallback((word) => [word]);
-
 Font.register({
   family: "Inter",
   fonts: [
@@ -20,7 +21,6 @@ Font.register({
   ],
 });
 
-// Styles PDF
 const styles = StyleSheet.create({
   page: {
     fontFamily: "Inter",
@@ -28,127 +28,164 @@ const styles = StyleSheet.create({
     lineHeight: 1.4,
     color: "#1f2937",
     backgroundColor: "#ffffff",
-    padding: 40,
+    padding: 36,
   },
-  header: { marginBottom: 30, textAlign: "center" },
-  name: { fontSize: 24, fontWeight: "bold", color: "#6366f1", marginBottom: 8 },
-  subtitle: { fontSize: 14, color: "#374151", marginBottom: 12 },
+
+  // Header
+  header: { marginBottom: 18, textAlign: "center" },
+  name: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#111827",
+    marginBottom: 12,
+  },
+  subtitle: {
+    fontSize: 12,
+    color: "#4b5563",
+    fontWeight: "medium",
+    marginBottom: 6,
+  },
   contactInfo: {
     flexDirection: "row",
-    justifyContent: "space-around",
-    marginBottom: 20,
+    justifyContent: "center",
+    gap: 14,
+    marginTop: 4,
+    marginBottom: 8,
     fontSize: 9,
-    color: "#6b7280",
+    color: "#374151",
   },
-  contactItem: { textAlign: "center" },
-  section: { marginBottom: 24 },
+  contactItem: { flexDirection: "row", alignItems: "center", gap: 4 },
+
+  // Sections
+  section: { marginBottom: 20 },
   sectionTitle: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "#1f2937",
-    marginBottom: 12,
+    color: "#111827",
+    marginBottom: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#e5e7eb",
+    borderBottomColor: "#6366f1",
     paddingBottom: 4,
+    letterSpacing: 0.4,
   },
   aboutText: {
     fontSize: 10,
-    lineHeight: 1.5,
+    lineHeight: 1.4,
     color: "#374151",
     textAlign: "justify",
   },
-  experienceItem: { marginBottom: 16 },
+
+  // Expérience
+  experienceItem: { marginBottom: 10 },
   experienceHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 6,
+    marginBottom: 4,
   },
-  jobTitle: { fontSize: 11, fontWeight: "bold", color: "#1f2937" },
-  company: { fontSize: 10, color: "#6366f1", fontWeight: "medium" },
-  period: { fontSize: 9, color: "#6b7280", textAlign: "right" },
-  location: { fontSize: 9, color: "#6b7280", textAlign: "right" },
-  achievementsList: { marginLeft: 12 },
+  jobTitle: { fontSize: 11, fontWeight: "bold", color: "#111827" },
+  company: { fontSize: 9, color: "#6366f1", fontWeight: "medium" },
+  period: { fontSize: 8.5, color: "#6b7280", textAlign: "right" },
+  location: { fontSize: 8.5, color: "#6b7280", textAlign: "right" },
+  achievementsList: { marginLeft: 10 },
   achievement: {
     fontSize: 9,
     color: "#374151",
-    marginBottom: 3,
-    lineHeight: 1.3,
+    marginBottom: 2,
+    lineHeight: 1.25,
   },
-  bullet: { color: "#6366f1", marginRight: 6 },
+  bullet: { color: "#6366f1", marginRight: 4 },
+
+  // Formation
+  educationItem: { marginBottom: 10 },
+  eduHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 4,
+  },
+  degree: { fontSize: 11, fontWeight: "bold", color: "#111827" },
+  institution: { fontSize: 9, color: "#6366f1", fontWeight: "medium" },
+  eduPeriod: { fontSize: 8.5, color: "#6b7280", textAlign: "right" },
+
+  // Projets
   projectItem: {
-    marginBottom: 16,
-    padding: 12,
+    marginTop: 0,
+    marginBottom: 12,
+    padding: 8,
     backgroundColor: "#f9fafb",
-    borderRadius: 4,
+    borderRadius: 3,
   },
   projectHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "flex-start",
-    marginBottom: 6,
-  },
-  projectTitle: { fontSize: 11, fontWeight: "bold", color: "#1f2937", flex: 1 },
-  projectStatus: {
-    fontSize: 8,
-    paddingVertical: 2,
-    paddingHorizontal: 6,
-    borderRadius: 4,
-  },
-  projectType: {
-    fontSize: 9,
-    color: "#6366f1",
-    fontWeight: "medium",
     marginBottom: 4,
   },
-  projectDescription: {
-    fontSize: 9,
-    color: "#374151",
-    lineHeight: 1.4,
-    marginBottom: 6,
+  projectTitle: {
+    fontSize: 10.5,
+    fontWeight: "bold",
+    color: "#111827",
+    flex: 1,
   },
-  technologiesList: { flexDirection: "row", flexWrap: "wrap", marginBottom: 4 },
+  projectStatus: {
+    fontSize: 7.5,
+    paddingVertical: 1,
+    paddingHorizontal: 4,
+    borderRadius: 3,
+  },
+  projectDescription: {
+    fontSize: 8.5,
+    color: "#374151",
+    lineHeight: 1.3,
+    marginBottom: 4,
+  },
+  technologiesList: { flexDirection: "row", flexWrap: "wrap", marginBottom: 2 },
   techBadge: {
-    fontSize: 8,
+    fontSize: 7.5,
     color: "#374151",
     backgroundColor: "#e5e7eb",
-    paddingVertical: 2,
+    paddingVertical: 1.5,
+    paddingHorizontal: 4,
+    borderRadius: 3,
+    marginRight: 3,
+    marginBottom: 3,
+  },
+  projectLinks: { flexDirection: "row", marginTop: 4, gap: 8 },
+
+  // Compétences
+  skillsContainer: { flexDirection: "row", justifyContent: "space-between" },
+  skillsColumn: { flex: 1, marginRight: 8 },
+  skillsSubtitle: {
+    fontSize: 10.5,
+    fontWeight: "medium",
+    color: "#111827",
+    marginBottom: 6,
+  },
+  skillsList: { flexDirection: "row", flexWrap: "wrap" },
+  skillBadge: {
+    fontSize: 8.5,
+    borderWidth: 1,
+    borderColor: "#d1d5db",
+    paddingVertical: 3,
     paddingHorizontal: 6,
     borderRadius: 3,
     marginRight: 4,
     marginBottom: 4,
   },
-  skillsContainer: { flexDirection: "row", justifyContent: "space-between" },
-  skillsColumn: { flex: 1 },
-  skillsSubtitle: {
-    fontSize: 11,
-    fontWeight: "medium",
-    color: "#1f2937",
-    marginBottom: 8,
-  },
-  skillsList: { flexDirection: "row", flexWrap: "wrap", marginBottom: 4 },
-  skillBadge: {
-    fontSize: 9,
-    color: "#1f2937",
-    borderWidth: 1,
-    borderColor: "#d1d5db",
-    paddingVertical: 3,
-    paddingHorizontal: 8,
-    borderRadius: 4,
-    marginRight: 4,
-    marginBottom: 4,
-  },
-  linkText: { color: "#6366f1", textDecoration: "underline" },
+  skillBadgeTech: { backgroundColor: "#f3f4f6", color: "#1f2937" },
+  skillBadgeSoft: { backgroundColor: "#ffffff", color: "#374151" },
+
+  // Footer
   footer: {
     position: "absolute",
-    bottom: 30,
-    left: 40,
-    right: 40,
+    bottom: 24,
+    left: 36,
+    right: 36,
     textAlign: "center",
-    fontSize: 8,
+    fontSize: 7.5,
     color: "#9ca3af",
     borderTopWidth: 1,
     borderTopColor: "#e5e7eb",
-    paddingTop: 12,
+    paddingTop: 8,
   },
 });
 
@@ -165,10 +202,10 @@ const PDFDocument: React.FC = () => (
             <Text>Email: {siteConfig.email}</Text>
           </View>
           <View style={styles.contactItem}>
-            <Text>Téléphone: {siteConfig.phone}</Text>
+            <Text>Tél: {siteConfig.phone}</Text>
           </View>
           <View style={styles.contactItem}>
-            <Text>Localisation: {siteConfig.location}</Text>
+            <Text>Lieu: {siteConfig.location}</Text>
           </View>
         </View>
       </View>
@@ -209,37 +246,99 @@ const PDFDocument: React.FC = () => (
         ))}
       </View>
 
+      {/* Education */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Formation</Text>
+        {siteConfig.education.map((edu, idx) => (
+          <View key={idx} style={styles.educationItem}>
+            <View style={styles.eduHeader}>
+              <View>
+                <Text style={styles.degree}>{edu.degree}</Text>
+                <Text style={styles.institution}>{edu.institution}</Text>
+              </View>
+              <View>
+                <Text style={styles.eduPeriod}>{edu.period}</Text>
+                {edu.location && (
+                  <Text style={styles.location}>{edu.location}</Text>
+                )}
+              </View>
+            </View>
+            {edu.description &&
+              edu.description.map((d, i) => (
+                <View
+                  key={i}
+                  style={{ flexDirection: "row", alignItems: "flex-start" }}
+                >
+                  <Text style={styles.bullet}>•</Text>
+                  <Text style={styles.achievement}>{d}</Text>
+                </View>
+              ))}
+          </View>
+        ))}
+      </View>
+
       {/* Projects */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Projets Phares</Text>
-        {siteConfig.projects.map((project, index) => (
-          <View key={index} style={styles.projectItem}>
-            <View style={styles.projectHeader}>
-              <Text style={styles.projectTitle}>{project.title}</Text>
-              <Text
-                style={[
-                  styles.projectStatus,
-                  {
-                    backgroundColor:
-                      project.status === "Terminé" ? "#d1fae5" : "#ddd6fe",
-                    color: project.status === "Terminé" ? "#059669" : "#7c3aed",
-                  },
-                ]}
-              >
-                {project.status}
-              </Text>
-            </View>
-            <Text style={styles.projectType}>{project.type}</Text>
-            <Text style={styles.projectDescription}>{project.description}</Text>
-            <View style={styles.technologiesList}>
-              {project.technologies.map((tech, techIndex) => (
-                <Text key={techIndex} style={styles.techBadge}>
-                  {tech}
+        {siteConfig.projects
+          .filter((project) => project.title && project.description)
+          .map((project, index) => (
+            <View key={index} style={styles.projectItem}>
+              <View style={styles.projectHeader}>
+                <Text style={styles.projectTitle}>{project.title}</Text>
+                <Text
+                  style={[
+                    styles.projectStatus,
+                    {
+                      backgroundColor:
+                        project.status === "Terminé" ? "#d1fae5" : "#ede9fe",
+                      color:
+                        project.status === "Terminé" ? "#059669" : "#7c3aed",
+                    },
+                  ]}
+                >
+                  {project.status}
                 </Text>
-              ))}
+              </View>
+              {project.type !== "Autre" && (
+                <Text
+                  style={{ fontSize: 9, color: "#6366f1", marginBottom: 4 }}
+                >
+                  {project.type}
+                </Text>
+              )}
+              <Text style={styles.projectDescription}>
+                {project.description}
+              </Text>
+              <View style={styles.technologiesList}>
+                {project.technologies.map((tech, techIndex) => (
+                  <Text key={techIndex} style={styles.techBadge}>
+                    {tech}
+                  </Text>
+                ))}
+              </View>
+
+              {/* 🔗 Liens */}
+              <View style={styles.projectLinks}>
+                {project.link && (
+                  <Link
+                    src={project.link}
+                    style={{ fontSize: 8, color: "#2563eb" }}
+                  >
+                    Voir en ligne →
+                  </Link>
+                )}
+                {project.github && (
+                  <Link
+                    src={project.github}
+                    style={{ fontSize: 8, color: "#374151" }}
+                  >
+                    Code source
+                  </Link>
+                )}
+              </View>
             </View>
-          </View>
-        ))}
+          ))}
       </View>
 
       {/* Skills */}
@@ -247,20 +346,26 @@ const PDFDocument: React.FC = () => (
         <Text style={styles.sectionTitle}>Compétences</Text>
         <View style={styles.skillsContainer}>
           <View style={styles.skillsColumn}>
-            <Text style={styles.skillsSubtitle}>Compétences Techniques</Text>
+            <Text style={styles.skillsSubtitle}>Techniques</Text>
             <View style={styles.skillsList}>
               {siteConfig.skills.technical.map((skill, index) => (
-                <Text key={index} style={styles.skillBadge}>
+                <Text
+                  key={index}
+                  style={[styles.skillBadge, styles.skillBadgeTech]}
+                >
                   {skill}
                 </Text>
               ))}
             </View>
           </View>
           <View style={styles.skillsColumn}>
-            <Text style={styles.skillsSubtitle}>Compétences Transversales</Text>
+            <Text style={styles.skillsSubtitle}>Transversales</Text>
             <View style={styles.skillsList}>
               {siteConfig.skills.soft.map((skill, index) => (
-                <Text key={index} style={styles.skillBadge}>
+                <Text
+                  key={index}
+                  style={[styles.skillBadge, styles.skillBadgeSoft]}
+                >
                   {skill}
                 </Text>
               ))}
@@ -272,8 +377,8 @@ const PDFDocument: React.FC = () => (
       {/* Footer */}
       <View style={styles.footer}>
         <Text>
-          Portfolio professionnel - LinkedIn: {siteConfig.socialLinks.linkedin}{" "}
-          • GitHub: {siteConfig.socialLinks.github}
+          Portfolio - LinkedIn: {siteConfig.socialLinks.linkedin} • GitHub:{" "}
+          {siteConfig.socialLinks.github}
         </Text>
       </View>
     </Page>
