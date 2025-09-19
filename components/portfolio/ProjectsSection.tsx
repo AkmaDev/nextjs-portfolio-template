@@ -154,7 +154,7 @@ export function ProjectsSection() {
 
             <Button className="btn-professional" asChild>
               <a
-                href={siteConfig.socialLinks.portfolioDesign}
+                href="https://www.manasseakpovi.com/portfoliodesign"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center"
