@@ -63,9 +63,9 @@ export function ProjectsSection() {
                       {project.status}
                     </Badge>
                   </div>
-                  <p className="text-sm text-primary font-medium mb-3">
+                  {/* <p className="text-sm text-primary font-medium mb-3">
                     {project.type}
-                  </p>
+                  </p> */}
                 </header>
 
                 <p className="text-muted-foreground mb-4 leading-relaxed">

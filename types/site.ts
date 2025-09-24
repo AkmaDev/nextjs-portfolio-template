@@ -76,7 +76,7 @@ export const siteConfig: SiteConfig = {
   hero: {
     variant: "with-image",
     title: "Manassé AKPOVI",
-    subtitle: "Alternance Product Builder / Product Management",
+    subtitle: "Alternance Product Builder - Creative coder IA",
     description:
       "Étudiant en Ingénierie Web (ESGI) prêt à rejoindre une équipe ambitieuse pour concevoir, tester et déployer des produits digitaux. Passionné par la création de MVP, l'UX et la croissance produit.",
     ctaText: "Découvrir mes projets",
